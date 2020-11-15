@@ -1,0 +1,26 @@
+开发平台：
+	Visual Studio 2017 + Qt
+	
+开发语言:
+	C/C++
+
+操作系统:
+	win10
+
+运行需求：
+	系统   win all 32bit 以上
+	内存： 4 GB
+
+数据库信息：
+	类型：MySQL
+	版本：8.0.18
+	账户：root
+	密码：rootroot
+	
+项目部署说明：
+	1.安装Qt
+	2.在Visual Studio 2017中安装Qt开发插件
+	3.安装vcpkg
+	4.vcpkg需要安装库(windows-x86):boost,opencv,mysql
+	5.导入数据库
+	6.将本地配置文件放到源码路径下

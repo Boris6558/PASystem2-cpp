@@ -1,0 +1,999 @@
+/*
+ * UCAP Manuscript scripts for page
+ * http://www.ucap.com.cn
+ */
+
+//默认稿件页字体大小
+var defaultPageFontSize = 12;
+
+//默认稿件页面大中小容器编号
+var defaultPageZoomId = "contentzoom";
+
+//默认稿件页面相关附件容器编号
+var defaultAppendixsObjId = "cmspro_appendixs";
+
+//默认稿件页面相关连接容器编号
+var defaultReldocumentsObjId = "cmspro_reldocuments";
+var ctx,ctx_strs,this_status=true;
+
+var IMAGE_PRE = "../../xhtml/";
+
+//when view at location and preview 
+if (location.href.indexOf("http://") == -1)
+	IMAGE_PRE = "";
+else if (location.href.indexOf("/preview/") != -1)
+	IMAGE_PRE = "";
+
+/*
+ * scrolltotop
+ */
+var scrolltotop = {
+	//startline: Integer. Number of pixels from top of doc scrollbar is scrolled before showing control
+	//scrollto: Keyword (Integer, or "Scroll_to_Element_ID"). How far to scroll document up when control is clicked on (0=top).
+	setting: {
+		startline: 100,
+		scrollto: 0,
+		scrollduration: 1000,
+		fadeduration: [500, 100]
+	},
+	controlHTML: '', //HTML for control, which is auto wrapped in DIV w/ ID="topcontrol"
+	controlattrs: {
+		offsetx: 5,
+		offsety: 30
+	}, //offset of control relative to right/ bottom of window corner
+	anchorkeyword: '#top', //Enter href value of HTML anchors on the page that should also act as "Scroll Up" links
+
+	state: {
+		isvisible: false,
+		shouldvisible: false
+	},
+
+	scrollup: function() {
+		if (!this.cssfixedsupport) //if control is positioned using JavaScript
+			this.$control.css({
+				opacity: 0
+			}) //hide control immediately after clicking it
+		var dest = isNaN(this.setting.scrollto) ? this.setting.scrollto : parseInt(this.setting.scrollto)
+		if (typeof dest == "string" && jQuery('#' + dest).length == 1) //check element set by string exists
+			dest = jQuery('#' + dest).offset().top
+		else
+			dest = 0
+		this.$body.animate({
+			scrollTop: dest
+		}, this.setting.scrollduration);
+	},
+
+	keepfixed: function() {
+		var $window = jQuery(window)
+		var controlx = $window.scrollLeft() + $window.width() - this.$control.width() - this.controlattrs.offsetx
+		var controly = $window.scrollTop() + $window.height() - this.$control.height() - this.controlattrs.offsety
+		this.$control.css({
+			left: controlx + 'px',
+			top: controly + 'px'
+		})
+	},
+
+	togglecontrol: function() {
+		var scrolltop = jQuery(window).scrollTop()
+		if (!this.cssfixedsupport)
+			this.keepfixed()
+		this.state.shouldvisible = (scrolltop >= this.setting.startline) ? true : false
+		if (this.state.shouldvisible && !this.state.isvisible) {
+			this.$control.stop().animate({
+				opacity: 1
+			}, this.setting.fadeduration[0])
+			this.state.isvisible = true
+		} else if (this.state.shouldvisible == false && this.state.isvisible) {
+			this.$control.stop().animate({
+				opacity: 0
+			}, this.setting.fadeduration[1])
+			this.state.isvisible = false
+		}
+	},
+
+	init: function() {
+		jQuery(document).ready(function($) {
+			var mainobj = scrolltotop
+			var iebrws = document.all
+			mainobj.cssfixedsupport = !iebrws || iebrws && document.compatMode == "CSS1Compat" && window.XMLHttpRequest //not IE or IE7+ browsers in standards mode
+			mainobj.$body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body')
+
+			mainobj.$control = $('<div id="topcontrol">' + mainobj.controlHTML + '</div>')
+				.css({
+					position: mainobj.cssfixedsupport ? 'fixed' : 'absolute',
+					bottom: mainobj.controlattrs.offsety,
+					right: mainobj.controlattrs.offsetx,
+					opacity: 0,
+					cursor: 'pointer'
+				})
+				.attr({
+					title: 'Scroll Back to Top'
+				})
+				.click(function() {
+					mainobj.scrollup();
+					return false
+				})
+				.appendTo('body')
+
+			if (document.all && !window.XMLHttpRequest && mainobj.$control.text() != '') //loose check for IE6 and below, plus whether control contains any text
+				mainobj.$control.css({
+					width: mainobj.$control.width()
+				}) //IE6- seems to require an explicit width on a DIV containing text
+			mainobj.togglecontrol()
+
+			$('a[href="' + mainobj.anchorkeyword + '"]').click(function() {
+				mainobj.scrollup()
+				return false
+			})
+
+			$(window).bind('scroll resize', function(e) {
+				mainobj.togglecontrol()
+			})
+		})
+	}
+}
+
+/*
+ * cmspro_appendixs
+ */
+var cmspro_appendixs = {
+
+	setting: {
+		startline: 0,
+		scrollto: 0,
+		scrollduration: 1000,
+		fadeduration: [500, 100]
+	},
+	controlHTML: '<img src="' + IMAGE_PRE + 'images/cmspro_appendixs.jpg"/>', //HTML for control, which is auto wrapped in DIV w/ ID="topcontrol"
+	controlattrs: {
+		offsetx: 5,
+		offsety: 450
+	}, //offset of control relative to right/ bottom of window corner
+	anchorkeyword: '#cmspro_appendixs', //Enter href value of HTML anchors on the page that should also act as "Scroll Up" links
+	state: {
+		isvisible: false,
+		shouldvisible: false
+	},
+	scrollup: function() {
+		if (!this.cssfixedsupport) //if control is positioned using JavaScript
+			this.$control.css({
+				opacity: 0
+			}) //hide control immediately after clicking it
+		var dest = isNaN(this.setting.scrollto) ? this.setting.scrollto : parseInt(this.setting.scrollto)
+		if (typeof dest == "string" && jQuery('#' + dest).length == 1) //check element set by string exists
+			dest = jQuery('#' + dest).offset().top
+		else
+			dest = 0
+		dest = jQuery('#cmspro_appendixs').offset().top;
+		this.$body.animate({
+			scrollTop: dest
+		}, this.setting.scrollduration);
+	},
+
+	keepfixed: function() {
+		var $window = jQuery(window)
+		var controlx = $window.scrollLeft() + $window.width() - this.$control.width() - this.controlattrs.offsetx
+		var controly = $window.scrollTop() + $window.height() - this.$control.height() - this.controlattrs.offsety
+		this.$control.css({
+			left: controlx + 'px',
+			top: controly + 'px'
+		})
+	},
+
+	togglecontrol: function() {
+		var scrolltop = jQuery(window).scrollTop()
+		if (!this.cssfixedsupport)
+			this.keepfixed()
+		this.state.shouldvisible = (scrolltop >= this.setting.startline) ? true : false
+		if (this.state.shouldvisible && !this.state.isvisible) {
+			this.$control.stop().animate({
+				opacity: 1
+			}, this.setting.fadeduration[0])
+			this.state.isvisible = true
+		} else if (this.state.shouldvisible == false && this.state.isvisible) {
+			this.$control.stop().animate({
+				opacity: 0
+			}, this.setting.fadeduration[1])
+			this.state.isvisible = false
+		}
+	},
+	init: function() {
+		jQuery(document).ready(function($) {
+
+			var mainobj = cmspro_appendixs
+			var iebrws = document.all
+			mainobj.cssfixedsupport = !iebrws || iebrws && document.compatMode == "CSS1Compat" && window.XMLHttpRequest //not IE or IE7+ browsers in standards mode
+			mainobj.$body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body')
+
+			mainobj.$control = $('<div id="topcontrol">' + mainobj.controlHTML + '</div>')
+				.css({
+					position: mainobj.cssfixedsupport ? 'fixed' : 'absolute',
+					bottom: mainobj.controlattrs.offsety,
+					right: mainobj.controlattrs.offsetx,
+					opacity: 0,
+					cursor: 'pointer'
+				})
+				.attr({
+					title: 'Scroll Back to Top'
+				})
+				.click(function() {
+					mainobj.scrollup();
+					return false
+				})
+				.appendTo('body')
+
+			if (document.all && !window.XMLHttpRequest && mainobj.$control.text() != '') //loose check for IE6 and below, plus whether control contains any text
+				mainobj.$control.css({
+					width: mainobj.$control.width()
+				}) //IE6- seems to require an explicit width on a DIV containing text
+			mainobj.togglecontrol()
+
+			$('a[href="' + mainobj.anchorkeyword + '"]').click(function() {
+				mainobj.scrollup()
+				return false
+			})
+
+			$(window).bind('scroll resize', function(e) {
+				mainobj.togglecontrol()
+			})
+		})
+	}
+}
+
+
+
+/*
+ * 改变页面字体大小
+ */
+
+	function doZoom(pcontentId, size) {
+		if (typeof size == undefined) {
+			size = defaultPageFontSize;
+		}
+
+		if (typeof pcontentId == undefined) {
+			pcontentId = defaultPageZoomId;
+		}
+		jQuery('#' + pcontentId).css({
+			fontSize: size + 'px'
+		});
+	}
+
+	function doZoom(size) {
+		if (typeof size == undefined) {
+			size = defaultPageFontSize;
+		}
+		jQuery('#' + defaultPageZoomId).css({
+			fontSize: size + 'px'
+		});
+	}
+
+
+
+	/*
+	 * 稿件访问记数
+	 */
+
+	function addViewRecord(websiteId, channelId, manuscriptId, userId) {
+
+		//配置了开启访问记数功能时
+		if (defaultViewCountOpen) {
+			var url = defaultAccountAppUrl;
+			if (typeof websiteId == undefined) {
+				websiteId = "";
+			}
+			if (typeof channelId == undefined) {
+				channelId = "";
+			}
+			if (typeof manuscriptId == undefined) {
+				manuscriptId = "";
+			}
+			if (typeof userId == undefined) {
+				userId = "";
+			}
+			url += "website_id=" + websiteId + "&channel_id=" + channelId + "&manuscript_id=" + manuscriptId + "&user_id=" + userId;
+			loadScript(url);
+		}
+	}
+
+	function hiddenPageObject(objectId) {
+		jQuery('#' + objectId).css('display', 'none');
+	}
+
+
+	/*
+	 * 分享地址JSON串
+	 * titlePre 标题参数名
+	 * urlPre 地址参数名
+	 * istop 是否在更多中显示
+	 */
+var WShareAddress = {
+	"address": [{
+			"id": "sina",
+			"title": "新浪微博",
+			"logimg": "sina.jpg",
+			"istop": "true",
+			"posturl": "http://v.t.sina.com.cn/share/share.php?i=1",
+			"titlePre": "title",
+			"urlPre": "url"
+		}, {
+			"id": "tenlcent",
+			"title": "腾讯微博",
+			"logimg": "tenlcent.jpg",
+			"istop": "true",
+			"posturl": "http://share.v.t.qq.com/index.php?c=share&a=index",
+			"titlePre": "title",
+			"urlPre": "url"
+		}, {
+			"id": "sohu",
+			"title": "搜狐微博",
+			"logimg": "sohu.jpg",
+			"istop": "true",
+			"posturl": "http://t.sohu.com/third/post.jsp?i=1",
+			"titlePre": "title",
+			"urlPre": "url"
+		}, {
+			"id": "163",
+			"title": "网易微博",
+			"logimg": "163.jpg",
+			"istop": "true",
+			"posturl": "http://t.163.com/article/user/checkLogin.do?i=1",
+			"titlePre": "title",
+			"urlPre": "url"
+		},
+
+		{
+			"id": "renren",
+			"title": "人人网",
+			"logimg": "renren.jpg",
+			"istop": "false",
+			"posturl": "http://share.renren.com/share/buttonshare.do?i=1",
+			"titlePre": "title",
+			"urlPre": "link"
+		}, {
+			"id": "qzone",
+			"title": "QQ空间",
+			"logimg": "qzone.jpg",
+			"istop": "false",
+			"posturl": "http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?i=1",
+			"titlePre": "title",
+			"urlPre": "link"
+		}
+	]
+};
+
+var WORDS_SHARE_TO = "分享";
+var WORDS_SHARE_MORE = "更多";
+
+function WShare() {
+
+
+	WShare.prototype.loadBox = function() {
+		var boxString = "";
+
+		boxString += "<div class=\"wshare\"><div><font class=\"f14\">" + WORDS_SHARE_TO + "</font>";
+
+		for (var i = 0; i < WShareAddress.address.length; i++) {
+			var ads = WShareAddress.address[i];
+			if (ads.istop == "true")
+				boxString += "<a onClick=\"WShare.goShare('" + ads.id + "')\" title=\"" + WORDS_SHARE_TO + ads.title + "\" valign=\"middle\" ><img class=\"f145\" src=\"" + IMAGE_PRE + "images/wshare/" + ads.logimg + "\" alt=\"" + WORDS_SHARE_TO + ads.title + "\"/></a>";
+		}
+		boxString += "<a  onclick=\"WShare.showMoreDiv()\" class=\"f12\" title=\"" + WORDS_SHARE_MORE + "\"><img class=\"f145\" src=\"" + IMAGE_PRE + "images/wshare/more.jpg\" alt=\"" + WORDS_SHARE_MORE + "\"/>&nbsp;<font class=\"f14\">" + WORDS_SHARE_MORE + "</font></a>";
+		boxString += "</div><div id=\"more\" class=\"fen\"><table class=\"fen1\"><th colspan=\"2\" class=\"fen2\" align=\"left\">" + WORDS_SHARE_TO + "...</th>";
+
+		var moreSize = 0;
+		for (var i = 0; i < WShareAddress.address.length; i++) {
+			var ads = WShareAddress.address[i];
+			//更多分享区
+			if (ads.istop == "false") {
+
+				if ((moreSize % 2) == 0)
+					boxString += "<tr align=\"center\">";
+
+				boxString += "<td align=\"left\"> <a onClick=\"WShare.goShare('" + ads.id + "')\" title=\"" + WORDS_SHARE_TO + ads.title + "\" valign=\"middle\" class=\"f14\"><img src=\"" + IMAGE_PRE + "images/wshare/" + ads.logimg + "\" class=\"ver\" alt=\"" + WORDS_SHARE_TO + ads.title + "\"/>&nbsp;" + ads.title + "</a></td>";
+
+				if ((moreSize % 1) == 0 && moreSize != 0)
+					boxString += "</tr>";
+				moreSize++;
+			}
+		}
+
+		boxString += "</table></div>";
+		// alert(boxString);
+		document.write(boxString);
+	}
+
+	//分享提交
+	WShare.prototype.goShare = function(addressId) {
+
+		var postURL;
+
+		var url = location.href;
+
+		var infoTitle = document.getElementsByTagName("title")[0].innerHTML;
+
+		var address = this.getAddressById(addressId);
+
+		if (address) {
+			postURL = address.posturl + "&" + address.titlePre + "=" + infoTitle + "&" + address.urlPre + "=" + url;
+			window.open(postURL);
+			//location.href=postURL;
+		}
+	}
+
+
+
+	WShare.prototype.getAddressById = function(addressId) {
+		if (!addressId) {
+			return "sina";
+		}
+		for (var i = 0; i < WShareAddress.address.length; i++) {
+			var ads = WShareAddress.address[i];
+			if (ads.id == addressId)
+				return ads;
+		}
+	}
+
+	//分享更多
+	WShare.prototype.showMoreDiv = function() {
+		var more = document.getElementById("more");
+		if (more.style.display == "")
+			more.style.display = "block";
+		else
+			more.style.display = "";
+	}
+
+
+
+}
+
+
+
+var WShare = new WShare();
+
+
+var num = "";
+
+//静态预览分页
+
+var lanmu = $('meta[name="lanmu"]').attr('content');
+var bhtml = "";
+// $(function() {
+// 	var ctx = document.getElementById("UCAP-CONTENT");	
+// 	if (ctx) {
+// 		bhtml = ctx.innerHTML;
+// 		ctx.style.display = "none";
+// 	}
+// 	//bhtml = document.getElementById("UCAP-CONTENT").innerHTML;
+// 	//bhtml = bhtml.replace(/web/g,"");
+// 	//$("body").html(bhtml);
+// });
+/*function manuscriptPage() {
+	//稿件置顶window.focus()
+	var start1 = new Date().getMilliseconds();
+	var ctx = document.getElementById("UCAP-CONTENT");	
+	if (ctx) {
+		bhtml = ctx.innerHTML;
+		ctx.style.display = "none";
+		
+		var url = document.location.href.toString();
+		if (url.indexOf("allContent") != -1) {
+			ctx.style.display = "";
+			return false;
+		}
+		var flag = url.substring(url.indexOf("#") + 1, url.length);
+		var h1 = $('h1').eq(0).text();
+
+		var ctx_str = bhtml;//ctx.innerHTML;
+		//ctx_str 内容
+		var ctx_strs;
+		if (ctx_str.indexOf("#PAGE_BREAK#") != -1) { //兼容历史分页符
+			ctx_strs = ctx_str.split("#PAGE_BREAK#");
+		} else if (ctx_str.indexOf("<pagebreak>") != -1) { //兼容历史分页符
+			ctx_strs = ctx_str.split("<pagebreak></pagebreak>");
+		} else { //兼容历史分页符
+			ctx_strs = ctx_str.split("<PAGEBREAK></PAGEBREAK>");
+		}
+
+		//ctx_strs 页数
+		num = ctx_strs.length;
+		if (ctx_strs.length > 1) {
+			var pageBreakDiv = document.getElementById("pageBreak");
+			var pageBreakA;
+			pageBreakDiv = $(pageBreakDiv);
+
+			$(document).attr("title", h1 + "(" + flag + ")_" + lanmu + "_中国政府网");
+
+			for (var i in ctx_strs) {
+				if ((i + 1) == 1) {
+					pageBreakDiv.append('<a href="javascript:void(0);" onClick=per()><</a>');
+					$("#pageBreak a").eq(1).addClass('hover')
+				}
+				pageBreakA = document.createElement("A");
+				pageBreakA.setAttribute("href", "#" + (i * 1 + 1));
+				pageBreakA.innerHTML = i * 1 + 1;
+				pageBreakA.setAttribute("dd", ctx_strs[i]);
+				pageBreakA.setAttribute("onClick", "pageBreakAEvent(this)");
+
+				pageBreakDiv.append(pageBreakA);
+				if ((i * 1 + 1) == ctx_strs.length) {
+					var  urlT2,k = url.lastIndexOf("#");
+					if( k >0 ){url = url.substring(0,k);} 
+					if (url.indexOf("?") > 0) {
+						urlT2 = url + "&allContent";
+					} else {
+						urlT2 = url + "?allContent";
+					}
+					pageBreakDiv.append("<a href='javascript:void(0);' onClick='next()'>></a>");
+					pageBreakDiv.append("<a href='javascript:void(0);' onClick='showLastContent(" + ctx_strs.length + ")'>余下全文</a>");
+					pageBreakDiv.append("<a href='" + urlT2 + "'>全文</a>");
+				}
+			}
+			if (flag >= 2) {
+				var pageBreakA = document.createElement("A");
+				pageBreakA.setAttribute("dd", ctx_strs[flag - 1]);
+				pageBreakAEvent(pageBreakA);
+			} else {
+				ctx.innerHTML = ctx_strs[0];
+			}
+
+			if ($.trim($("#pageBreak").html()) == "") {
+				$("#pageBreak").hide();
+			} else {
+				$("#pageBreak").show();
+			}
+			document.num = num;
+		}
+		ctx.style.display = "";
+	}
+
+
+	$("#pageBreak a").eq(flag).addClass('hover');
+	if (isNaN(flag)) {
+		$("#pageBreak a").eq(1).addClass('hover');
+		if (document.num > 1) {
+			$(document).attr("title", h1 + "(" + 1 + ")_" + lanmu + "_中国政府网");
+		}
+	}
+
+	//设置宽度用来居中
+	var number = $("#pageBreak a").length;
+	var pageWidth = 0;
+	for (k = 0; k < number; k++) {
+		pageWidth += ($("#pageBreak a").eq(k).width() + 22);
+		//console.debug(pageWidth);
+	}
+	$("#pageBreak").width(pageWidth);
+	console.log( "spend time"+( new Date().getMilliseconds()- start1) );
+	//console.debug(document.num)
+}
+*/
+
+/*function showLastContent(end) {
+	var ctx = bhtml;
+	var ctx_str = ctx;
+	var url = document.location.href.toString();
+	var flag = url.substring(url.indexOf("#") + 1, url.length);
+	var flagTempF = 0;
+	if (!isNaN(flag)) {
+		flagTempF = flag;
+	}
+	//var contentTemp = ctx.innerHTML;
+	var ctx_strs;
+
+	if (ctx_str.indexOf("#PAGE_BREAK#") != -1) { //兼容历史分页符
+		ctx_strs = ctx_str.split("#PAGE_BREAK#");
+	} else if (ctx_str.indexOf("<pagebreak>") != -1) { //兼容历史分页符
+		ctx_strs = ctx_str.split("<pagebreak></pagebreak>");
+	} else { //兼容历史分页符
+		ctx_strs = ctx_str.split("<PAGEBREAK></PAGEBREAK>");
+	}
+	//ctx_strs 页数
+	var needContent = "";
+	for (var i = flagTempF - 1; i < ctx_strs.length; i++) {
+		needContent = needContent + ctx_strs[i];
+	}
+	var ctxLast = document.getElementById("UCAP-CONTENT");
+	needContent = needContent.replace(/undefined/g, "");
+	ctxLast.innerHTML = needContent;
+	$("#pageBreak").hide();
+}*/
+
+function per() {
+	var url = document.location.href.toString();
+	var flag = url.substring(url.indexOf("#") + 1, url.length);
+	if (flag != 1) {
+		var temp = flag - 1;
+		url = url.replace("#" + flag, "#" + temp);
+		location.href = url;
+		location.reload();
+	}
+	$(document).attr("title", pageTie + "(" + flag + ")_" + lanmu + "_中国政府网");
+
+
+}
+
+function next() {
+	var url = document.location.href.toString();
+	if (url.indexOf("#") < 0) {
+		location.href = url + "#2";
+		location.reload();
+	} else {
+		var flag = url.substring(url.indexOf("#") + 1, url.length);
+		if (flag != num) {
+			var temp = parseInt(flag) + 1;
+			url = url.replace("#" + flag, "#" + temp);
+			location.href = url;
+			location.reload();
+		}
+
+	}
+	$(document).attr("title", pageTie + "(" + flag + ")_" + lanmu + "_中国政府网");
+
+}
+
+
+function pageBreakAEvent(obj) {
+	var ctx = document.getElementById("UCAP-CONTENT");
+	//alert(obj.getAttribute("dd"));
+	//ctx.innerHTML = obj.getAttribute("dd");
+	document.documentElement.scrollTop = document.body.scrollTop = 0;
+
+	$("#pageBreak a").removeClass("hover");
+	obj.className = "hover";
+
+	var flagN = $(obj).text();
+	if (flagN != '') {
+    var h1 = $('h1').text().replace(/\n|\r/g, "");
+		$(document).attr("title", h1 + "(" + flagN + ")_" + lanmu + "_中国政府网");
+	}
+}
+
+
+
+/*
+ * 页面加载
+ */
+window.onload = function() {
+
+	//处理相关资源
+	var appendixsContentObj = document.getElementById(defaultAppendixsObjId);
+	if (appendixsContentObj) {
+		var appendixsContent = document.getElementById(defaultAppendixsObjId).innerHTML;
+		if (appendixsContent != "") {
+			cmspro_appendixs.init();
+		} else {
+			hiddenPageObject('cmspro_appendixs_title');
+		}
+	}
+
+	//处理关联稿件
+	var reldocumentsContentObj = document.getElementById(defaultReldocumentsObjId);
+	if (reldocumentsContentObj) {
+		var reldocumentsContent = document.getElementById(defaultReldocumentsObjId).innerHTML;
+		if (reldocumentsContent == "" || reldocumentsContent == "<TBODY></TBODY>")
+			hiddenPageObject('cmspro_reldocuments_title');
+	}
+
+	//加载滚动页签
+	scrolltotop.init();
+
+	loadOthers();
+}
+
+
+var isNewManuPageSplit = 0;
+
+/*
+ * 加载其它数据
+ */
+
+function loadOthers() {
+  //兼容历史处理模式，在页面全部加载之后才调用
+  if(isNewManuPageSplit == 0){
+    loadUcapContent();
+    isNewManuPageSplit = 1;
+    //laypageForManuscript(); //正文分页
+  }
+}
+
+//新的分页函数，建议直接在内容div的后面直接增加该函数，优化显示效果
+function manuscriptPage_N(){
+  loadOthers();
+}
+function loadUcapContent(){
+	ctx = document.getElementById("UCAP-CONTENT");
+	if (ctx) {
+		bhtml = ctx.innerHTML;
+		$("#UCAP-CONTENT").html('');
+		var ctx_str = bhtml;//ctx.innerHTML;
+		if (ctx_str.indexOf("#PAGE_BREAK#") != -1) { //兼容历史分页符
+			ctx_strs = ctx_str.split("#PAGE_BREAK#");
+			laypageForManuscript(); //正文分页
+		} else if (ctx_str.indexOf("<pagebreak>") != -1) { //兼容历史分页符
+			ctx_strs = ctx_str.split("<pagebreak></pagebreak>");
+			laypageForManuscript(); //正文分页
+		} else if(ctx_str.indexOf("<PAGEBREAK>") != -1){
+			ctx_strs = ctx_str.split("<PAGEBREAK></PAGEBREAK>");
+			laypageForManuscript(); //正文分页
+		} else { //兼容历史分页符
+			//如果页面没有分页符 分页标签隐藏
+			$("#pageBreak").hide();
+			document.getElementById('UCAP-CONTENT').innerHTML = ctx_str;	
+		}
+	}
+}
+//wenhm
+function laypageForManuscript(){	
+	//调用分页
+	laypage({
+		cont: 'pageBreak',
+		pages: ctx_strs.length,
+		first: 1, //将首页显示为数字1,。若不显示，设置false即可
+		last: ctx_strs.length, //将尾页显示为总页数。若不显示，设置false即可
+		prev: '<', //若不显示，设置false即可
+		next: '>', //若不显示，设置false即可
+		groups: 15,//连续显示分页数
+		jump: function(obj){
+			pageBreakAEvent(obj);
+			var url = document.location.href.toString();
+			var _url = url.substring(0,url.indexOf("#"));
+			var _status = url.substring(url.indexOf("#")+1,url.length);
+			if(this_status){
+				obj.curr = (typeof(_status)!="undefined" && _status.length>0 && _status.indexOf("http")==-1)?_status:obj.curr;
+			}
+			this_status=false;
+			//全文
+			if(_status =="allContent"){
+				$("#UCAP-CONTENT").empty();
+				for (var i=0;i<ctx_strs.length;i++) {
+					$("#UCAP-CONTENT").append(ctx_strs[i]);
+				}
+				$("#pageBreak").hide();
+				return false;
+			}
+			if(1==obj.curr){
+			  document.location.href = _url+"#1";
+			}else{
+			  document.location.href = _url+"#"+obj.curr; 
+			}
+			var h1 = $('h1').eq(0).text().replace(/\n|\r/g, "");
+			$(document).attr("title", h1 + "(" + obj.curr + ")_" + lanmu + "_中国政府网");
+			document.getElementById('UCAP-CONTENT').innerHTML = ctx_strs[obj.curr-1];			
+		}
+	})
+	
+	total_width();
+	
+}
+
+//设置宽度用来居中
+function total_width(){
+	var number = $("#pageBreak .laypage_last").attr("data-page");
+	var pageWidth = 0;
+	var page_len = $("#laypage_0").children().length;
+	var addvalue=6;
+		
+	for (var k = 0; k < page_len; k++) {
+		pageWidth += ($("#laypage_0").children().eq(k).width())+addvalue;
+	}
+	
+	$("#pageBreak").width(pageWidth);
+}
+/**
+ * 	全文
+ */
+function showAllContent(){
+	var url = document.location.href.toString();
+	var flag = url.substring(0,url.indexOf("#"));
+	document.location.href=flag+'#allContent';
+	$("#UCAP-CONTENT").empty();
+	for (var i=0;i<ctx_strs.length;i++) {
+		$("#UCAP-CONTENT").append(ctx_strs[i]);
+	}
+	$("#pageBreak").hide();
+}
+/**
+ * 	余下全文
+ */
+function showLastContent(){
+	var url = document.location.href.toString();
+	var flag = url.substring(url.indexOf("#")+1,url.length);
+	if(url.indexOf("#")< 0 || typeof(flag)=="undefined" || flag>ctx_strs.length+1){flag=1;}
+	$("#UCAP-CONTENT").empty();
+	for (var i=flag-1;i<ctx_strs.length;i++) {
+		$("#UCAP-CONTENT").append(ctx_strs[i]);
+	}
+	$("#pageBreak").hide();
+}
+/****************laypage分页****************************/
+;!function(){
+"use strict";
+
+function laypage(options){
+    var skin = 'laypagecss';
+    laypage.dir = 'dir' in laypage ? laypage.dir : Page.getpath + '/skin/laypage.css';
+    new Page(options);
+    if(laypage.dir && !doc[id](skin)){
+        Page.use(laypage.dir, skin);
+    }
+}
+
+laypage.v = '1.3';
+
+var doc = document, id = 'getElementById', tag = 'getElementsByTagName';
+var index = 0, Page = function(options){
+    var that = this;
+    var conf = that.config = options || {};
+    conf.item = index++;
+    that.render(true);
+};
+
+Page.on = function(elem, even, fn){
+    elem.attachEvent ? elem.attachEvent('on'+ even, function(){
+        fn.call(elem, window.even); //for ie, this指向为当前dom元素
+    }) : elem.addEventListener(even, fn, false);
+    return Page;
+};
+
+Page.getpath = (function(){
+    var js = document.scripts, jsPath = js[js.length - 1].src;
+    return jsPath.substring(0, jsPath.lastIndexOf("/") + 1);
+}())
+
+Page.use = function(lib, id){
+    var link = doc.createElement('link');
+    link.type = 'text/css';
+    link.rel = 'stylesheet';
+    link.href = laypage.dir;
+    id && (link.id = id);
+    doc[tag]('head')[0].appendChild(link);
+    link = null;
+};
+
+//判断传入的容器类型
+Page.prototype.type = function(){
+    var conf = this.config;
+    if(typeof conf.cont === 'object'){
+        return conf.cont.length === undefined ? 2 : 3;
+    }
+};
+
+//分页视图
+Page.prototype.view = function(){
+    var that = this, conf = that.config, view = [], dict = {};
+    conf.pages = conf.pages|0;
+    conf.curr = (conf.curr|0) || 1;
+    conf.groups = 'groups' in conf ? (conf.groups|0) : 5;
+    conf.first = 'first' in conf ? conf.first : '&#x9996;&#x9875;';
+    conf.last = 'last' in conf ? conf.last : '&#x5C3E;&#x9875;';
+    conf.prev = 'prev' in conf ? conf.prev : '&#x4E0A;&#x4E00;&#x9875;';
+    conf.next = 'next' in conf ? conf.next : '&#x4E0B;&#x4E00;&#x9875;';
+    if(conf.pages <= 1){
+        return '';
+    }
+    
+    if(conf.groups > conf.pages){
+        conf.groups = conf.pages;
+    }
+    
+    //计算当前组
+    dict.index = Math.ceil((conf.curr + ((conf.groups > 1 && conf.groups !== conf.pages) ? 1 : 0))/(conf.groups === 0 ? 1 : conf.groups));
+    //当前页非首页，则输出上一页
+    if(conf.curr > 1 && conf.prev){
+        view.push('<a href="javascript:;" class="laypage_prev" data-page="'+ (conf.curr - 1) +'">'+ conf.prev +'</a>');
+    }
+    
+    //当前组非首组，则输出首页
+    if(dict.index > 1 && conf.first && conf.groups !== 0){
+        view.push('<a href="javascript:;" class="laypage_first" data-page="1"  title="&#x9996;&#x9875;">'+ conf.first +'</a><span>&#x2026;</span>');
+    }
+    
+    //输出当前页组
+    dict.poor = Math.floor((conf.groups-1)/2);
+    dict.start = dict.index > 1 ? conf.curr - dict.poor : 1;
+    dict.end = dict.index > 1 ? (function(){
+        var max = conf.curr + (conf.groups - dict.poor - 1);
+        return max > conf.pages ? conf.pages : max;
+    }()) : conf.groups;   
+    if(dict.end - dict.start < conf.groups - 1){ //最后一组状态
+        dict.start = dict.end - conf.groups + 1;
+    }
+    for(; dict.start <= dict.end; dict.start++){
+        if(dict.start == conf.curr){
+            view.push('<span class="laypage_curr" '+ (/^#/.test(conf.skin) ? 'style="background-color:'+ conf.skin +'"' : '') +'>'+ dict.start +'</span>');
+        } else {
+			view.push('<a href="javascript:;" data-page="'+ dict.start +'">'+ dict.start +'</a>');
+        }
+    }
+    
+    //总页数大于连续分页数，且当前组最大页小于总页，输出尾页
+    if(conf.pages > conf.groups && dict.end < conf.pages && conf.last && conf.groups !== 0){
+         view.push('<span>&#x2026;</span><a href="javascript:;" class="laypage_last" title="&#x5C3E;&#x9875;"  data-page="'+ conf.pages +'">'+ conf.last +'</a>');
+    }
+    
+    //当前页不为尾页时，输出下一页
+    dict.flow = !conf.prev && conf.groups === 0;
+    if(conf.curr !== conf.pages && conf.next || dict.flow){
+        view.push((function(){
+            return (dict.flow && conf.curr === conf.pages) 
+            ? '<span class="page_nomore" title="&#x5DF2;&#x6CA1;&#x6709;&#x66F4;&#x591A;">'+ conf.next +'</span>'
+            : '<a href="javascript:;" class="laypage_next" data-page="'+ (conf.curr + 1) +'">'+ conf.next +'</a>';
+        }()));
+    }
+    
+    return '<div name="laypage'+ laypage.v +'" class="laypage_main laypageskin_'+ (conf.skin ? (function(skin){
+        return /^#/.test(skin) ? 'molv' : skin;
+    }(conf.skin)) : 'default') +'" id="laypage_'+ that.config.item +'">'+ view.join('') + function(){
+        return conf.skip 
+        ? '<span class="laypage_total"><label>&#x5230;&#x7B2C;</label><input type="number" min="1" onkeyup="this.value=this.value.replace(/\\D/, \'\');" class="laypage_skip"><label>&#x9875;</label>'
+        + '<button type="button" class="laypage_btn">&#x786e;&#x5b9a;</button></span>' 
+        : '';
+    }() +'</div>';
+};
+
+//跳页
+Page.prototype.jump = function(elem){
+    if(!elem) return;
+    var that = this, conf = that.config, childs = elem.children;
+    var btn = elem[tag]('button')[0];
+    var input = elem[tag]('input')[0];
+    for(var i = 0, len = childs.length; i < len; i++){
+        if(childs[i].nodeName.toLowerCase() === 'a'){
+            Page.on(childs[i], 'click', function(){
+                var curr = this.getAttribute('data-page')|0;
+                conf.curr = curr;
+                that.render();
+				total_width();
+                
+            });
+        }
+    }
+    if(btn){
+        Page.on(btn, 'click', function(){
+            var curr = input.value.replace(/\s|\D/g, '')|0;
+            if(curr && curr <= conf.pages){
+                conf.curr = curr;
+                that.render();
+            }
+        });
+    }
+};
+
+//渲染分页
+Page.prototype.render = function(load){	
+    var that = this, conf = that.config, type = that.type();
+	//刷新选中当前分页
+	var url = document.location.href.toString();
+	var _url = url.substring(0,url.indexOf("#"));
+	var _status = url.substring(url.indexOf("#")+1,url.length);
+	if(this_status){
+		conf.curr = (typeof(_status)!="undefined" && _status.length>0 && _status.indexOf("http")==-1)?_status:conf.curr;
+	}
+	this_status=false;
+    var view = that.view();
+    if(type === 2){
+        conf.cont.innerHTML = view;
+    } else if(type === 3){
+        conf.cont.html(view);
+    } else {
+        doc[id](conf.cont).innerHTML = view;
+    }
+    conf.jump && conf.jump(conf, load);
+    that.jump(doc[id]('laypage_' + conf.item));
+    if(conf.hash && !load){
+        location.hash = '!'+ conf.hash +'='+ conf.curr;
+    }
+	if(conf.curr != ctx_strs.length){
+		$(".laypage_main").append("<a href='javascript:void(0);' onClick='showLastContent()' style=' width:78px'>余下全文</a>");
+	}
+	$(".laypage_main").append("<a href='javascript:void(0);' onClick='showAllContent()' style=' width:42px'>全文</a>");
+};
+
+//for 页面模块加载、Node.js运用、页面普通应用
+"function" === typeof define ? define(function() {
+    return laypage;
+}) : "undefined" != typeof exports ? module.exports = laypage : window.laypage = laypage;
+
+}();
+/**********************************************************************/

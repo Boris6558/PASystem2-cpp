@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\vcpkg.D.Vcpkg.vcpkg.1.0.0\build\native\vcpkg.D.Vcpkg.vcpkg.props" Condition="Exists('..\packages\vcpkg.D.Vcpkg.vcpkg.1.0.0\build\native\vcpkg.D.Vcpkg.vcpkg.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{AC717539-2B80-4F3E-B9B1-B4C28BB19202}</ProjectGuid>
+    <Keyword>QtVS_v302</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <QtInstall>msvc2017</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <QtInstall>msvc2017</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BackManagerPanel.cpp" />
+    <ClCompile Include="EnterViewLabel.cpp" />
+    <ClCompile Include="FeedBack.cpp" />
+    <ClCompile Include="HelpMeDecision.cpp" />
+    <ClCompile Include="HREcruitmentInfo.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MechanismDetail.cpp" />
+    <ClCompile Include="MechanismInfoPanel.cpp" />
+    <ClCompile Include="MLabel.cpp" />
+    <ClCompile Include="MSql.cpp" />
+    <ClCompile Include="PAResult.cpp" />
+    <ClCompile Include="PASystem.cpp" />
+    <ClCompile Include="PATable.cpp" />
+    <ClCompile Include="PAType.cpp" />
+    <ClCompile Include="ProvincesOfChina.cpp" />
+    <ClCompile Include="SeeFeedBack.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="PASystem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="BackManagerPanel.ui" />
+    <QtUic Include="FeedBack.ui" />
+    <QtUic Include="HelpMeDecision.ui" />
+    <QtUic Include="HREcruitmentInfo.ui" />
+    <QtUic Include="MechanismDetail.ui" />
+    <QtUic Include="MechanismInfoPanel.ui" />
+    <QtUic Include="PAResult.ui" />
+    <QtUic Include="PASystem.ui" />
+    <QtUic Include="PATable.ui" />
+    <QtUic Include="PAType.ui" />
+    <QtUic Include="SeeFeedBack.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="PASystem.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="EnterViewLabel.h" />
+    <ClInclude Include="resource.h" />
+    <QtMoc Include="SeeFeedBack.h" />
+    <QtMoc Include="HelpMeDecision.h" />
+    <QtMoc Include="PAResult.h" />
+    <QtMoc Include="PAType.h" />
+    <QtMoc Include="PATable.h" />
+    <QtMoc Include="BackManagerPanel.h" />
+    <QtMoc Include="FeedBack.h" />
+    <ClInclude Include="Good.h" />
+    <QtMoc Include="MechanismInfoPanel.h" />
+    <QtMoc Include="MechanismDetail.h" />
+    <QtMoc Include="HREcruitmentInfo.h" />
+    <ClInclude Include="ProvincesOfChina.h" />
+    <QtMoc Include="MLabel.h" />
+    <ClInclude Include="MSql.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="PASystem.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\vcpkg.D.Vcpkg.vcpkg.1.0.0\build\native\vcpkg.D.Vcpkg.vcpkg.targets" Condition="Exists('..\packages\vcpkg.D.Vcpkg.vcpkg.1.0.0\build\native\vcpkg.D.Vcpkg.vcpkg.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\vcpkg.D.Vcpkg.vcpkg.1.0.0\build\native\vcpkg.D.Vcpkg.vcpkg.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\vcpkg.D.Vcpkg.vcpkg.1.0.0\build\native\vcpkg.D.Vcpkg.vcpkg.props'))" />
+    <Error Condition="!Exists('..\packages\vcpkg.D.Vcpkg.vcpkg.1.0.0\build\native\vcpkg.D.Vcpkg.vcpkg.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\vcpkg.D.Vcpkg.vcpkg.1.0.0\build\native\vcpkg.D.Vcpkg.vcpkg.targets'))" />
+  </Target>
+</Project>

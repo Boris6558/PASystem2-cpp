@@ -1,0 +1,5 @@
+﻿  moc PASystem.h
+  PASystem.cpp
+  main.cpp
+  moc_PASystem.cpp
+  PASystem.vcxproj -> D:\__Codes\__Visual_Studio\PASystem 2.0\Release\PASystem.exe

@@ -1,0 +1,3909 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MechanismInfoPanel</class>
+ <widget class="QWidget" name="MechanismInfoPanel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1453</width>
+    <height>848</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MechanismInfoPanel</string>
+  </property>
+  <widget class="QLabel" name="label_name_team_name">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>10</y>
+     <width>1271</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>Team name</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_name_logo">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>111</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Box</enum>
+   </property>
+   <property name="text">
+    <string>LOGO HEER</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_name_5">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>10</y>
+     <width>16</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>微软雅黑</family>
+     <pointsize>11</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>|</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="listWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>80</y>
+     <width>261</width>
+     <height>761</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+   </property>
+   <item>
+    <property name="text">
+     <string>公司概况</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>人力资源</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>合同管理</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>查看</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>设置</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="QStackedWidget" name="stackedWidget">
+   <property name="geometry">
+    <rect>
+     <x>280</x>
+     <y>70</y>
+     <width>1171</width>
+     <height>781</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="page">
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QScrollArea" name="scrollArea">
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1126</width>
+          <height>3000</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>3000</height>
+         </size>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_2">
+         <item row="0" column="0">
+          <widget class="QGroupBox" name="groupBox">
+           <property name="title">
+            <string>公司概况</string>
+           </property>
+           <widget class="QLabel" name="label_name_logo_2">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>60</y>
+              <width>201</width>
+              <height>191</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Box</enum>
+            </property>
+            <property name="text">
+             <string>LOGO HEER</string>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_team_name_2">
+            <property name="geometry">
+             <rect>
+              <x>440</x>
+              <y>70</y>
+              <width>241</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_11">
+            <property name="geometry">
+             <rect>
+              <x>260</x>
+              <y>70</y>
+              <width>161</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>受理金融机构编号：</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_13">
+            <property name="geometry">
+             <rect>
+              <x>290</x>
+              <y>140</y>
+              <width>161</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>金融机构名称：</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_team_name_3">
+            <property name="geometry">
+             <rect>
+              <x>440</x>
+              <y>140</y>
+              <width>411</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="readOnly">
+             <bool>true</bool>
+            </property>
+           </widget>
+           <widget class="Line" name="line">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>270</y>
+              <width>1101</width>
+              <height>20</height>
+             </rect>
+            </property>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+           </widget>
+           <widget class="QGroupBox" name="groupBox_6">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>300</y>
+              <width>1091</width>
+              <height>1061</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string>基本信息</string>
+            </property>
+            <widget class="QLineEdit" name="lineEdit_team_name_6">
+             <property name="geometry">
+              <rect>
+               <x>260</x>
+               <y>690</y>
+               <width>411</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_team_name_8">
+             <property name="geometry">
+              <rect>
+               <x>260</x>
+               <y>850</y>
+               <width>411</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_name_17">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>690</y>
+               <width>111</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>注册人：</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_team_name_9">
+             <property name="geometry">
+              <rect>
+               <x>260</x>
+               <y>930</y>
+               <width>411</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_name_14">
+             <property name="geometry">
+              <rect>
+               <x>60</x>
+               <y>30</y>
+               <width>131</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>公司介绍：</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_name_16">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>620</y>
+               <width>111</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>行业类型：</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_name_19">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>850</y>
+               <width>111</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>电话：</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_team_name_10">
+             <property name="geometry">
+              <rect>
+               <x>260</x>
+               <y>1010</y>
+               <width>411</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_name_15">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>530</y>
+               <width>111</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>详细地址：</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_team_name_4">
+             <property name="geometry">
+              <rect>
+               <x>260</x>
+               <y>530</y>
+               <width>411</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_team_name_5">
+             <property name="geometry">
+              <rect>
+               <x>260</x>
+               <y>620</y>
+               <width>411</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="lineEdit_team_name_7">
+             <property name="geometry">
+              <rect>
+               <x>260</x>
+               <y>770</y>
+               <width>411</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>10</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="readOnly">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_name_20">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>930</y>
+               <width>111</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>邮箱：</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+            <widget class="QPlainTextEdit" name="plainTextEdit">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>80</y>
+               <width>741</width>
+               <height>421</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+             </property>
+             <property name="centerOnScroll">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_name_18">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>770</y>
+               <width>111</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>身份证;</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_name_21">
+             <property name="geometry">
+              <rect>
+               <x>140</x>
+               <y>1010</y>
+               <width>111</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>状态：</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QGroupBox" name="groupBox_7">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>1370</y>
+              <width>1081</width>
+              <height>691</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string>证书</string>
+            </property>
+            <widget class="QLabel" name="label_name_12">
+             <property name="geometry">
+              <rect>
+               <x>20</x>
+               <y>20</y>
+               <width>161</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>11</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>金融机构代码证：</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_5">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>70</y>
+               <width>821</width>
+               <height>581</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::Box</enum>
+             </property>
+             <property name="text">
+              <string>证件</string>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QPlainTextEdit" name="plainTextEdit_2">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>2110</y>
+              <width>831</width>
+              <height>421</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_name_33">
+            <property name="geometry">
+             <rect>
+              <x>50</x>
+              <y>2060</y>
+              <width>131</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>11</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>备注：</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton">
+            <property name="geometry">
+             <rect>
+              <x>760</x>
+              <y>2570</y>
+              <width>121</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>反馈</string>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="page_2">
+    <layout class="QGridLayout" name="gridLayout_4">
+     <item row="0" column="0">
+      <widget class="QScrollArea" name="scrollArea_2">
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>1147</width>
+          <height>757</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QGroupBox" name="groupBox_2">
+           <property name="title">
+            <string>人力资源</string>
+           </property>
+           <widget class="QTreeWidget" name="treeWidget_2">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>40</y>
+              <width>256</width>
+              <height>691</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+            </property>
+            <column>
+             <property name="text">
+              <string>人力资源模块</string>
+             </property>
+            </column>
+            <item>
+             <property name="text">
+              <string>机构员工概况</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>人才招聘计划</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>招聘员工</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>简历查看</string>
+              </property>
+             </item>
+            </item>
+           </widget>
+           <widget class="QStackedWidget" name="stackedWidget_3">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>30</y>
+              <width>861</width>
+              <height>711</height>
+             </rect>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="page_teamInfo">
+             <layout class="QGridLayout" name="gridLayout_12">
+              <item row="0" column="0">
+               <widget class="QScrollArea" name="scrollArea_12">
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_13">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>816</width>
+                   <height>1000</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>1000</height>
+                  </size>
+                 </property>
+                 <widget class="QGroupBox" name="groupBox_8">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>781</width>
+                    <height>481</height>
+                   </rect>
+                  </property>
+                  <property name="title">
+                   <string>基本信息</string>
+                  </property>
+                  <widget class="QLineEdit" name="lineEdit_HR_search">
+                   <property name="geometry">
+                    <rect>
+                     <x>530</x>
+                     <y>40</y>
+                     <width>241</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="placeholderText">
+                    <string>搜索员工相关信息</string>
+                   </property>
+                  </widget>
+                  <widget class="QTableWidget" name="tableWidget_HR">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>90</y>
+                     <width>771</width>
+                     <height>371</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                   </property>
+                   <property name="selectionBehavior">
+                    <enum>QAbstractItemView::SelectRows</enum>
+                   </property>
+                   <property name="showGrid">
+                    <bool>false</bool>
+                   </property>
+                   <column>
+                    <property name="text">
+                     <string>员工工号</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>姓名</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>性别</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>职位</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>邮箱</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>电话</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>生日</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>入职时间</string>
+                    </property>
+                   </column>
+                  </widget>
+                  <widget class="QLabel" name="label_88">
+                   <property name="geometry">
+                    <rect>
+                     <x>460</x>
+                     <y>40</y>
+                     <width>58</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>搜索</string>
+                   </property>
+                  </widget>
+                 </widget>
+                 <widget class="QGroupBox" name="groupBox_9">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>520</y>
+                    <width>781</width>
+                    <height>251</height>
+                   </rect>
+                  </property>
+                  <property name="title">
+                   <string>全体概况</string>
+                  </property>
+                  <widget class="QLabel" name="label_104">
+                   <property name="geometry">
+                    <rect>
+                     <x>30</x>
+                     <y>40</y>
+                     <width>111</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>公司总人数：</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_HR_team_count">
+                   <property name="geometry">
+                    <rect>
+                     <x>150</x>
+                     <y>40</y>
+                     <width>61</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>XXXXX</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_HR_accounting_male">
+                   <property name="geometry">
+                    <rect>
+                     <x>340</x>
+                     <y>40</y>
+                     <width>171</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>XXXXX</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_107">
+                   <property name="geometry">
+                    <rect>
+                     <x>230</x>
+                     <y>40</y>
+                     <width>111</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>男性占比：</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_HR_accounting_female">
+                   <property name="geometry">
+                    <rect>
+                     <x>600</x>
+                     <y>40</y>
+                     <width>171</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>XXXXX</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_109">
+                   <property name="geometry">
+                    <rect>
+                     <x>500</x>
+                     <y>40</y>
+                     <width>111</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>女性占比：</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                  <widget class="Line" name="line_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>90</y>
+                     <width>781</width>
+                     <height>16</height>
+                    </rect>
+                   </property>
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_110">
+                   <property name="geometry">
+                    <rect>
+                     <x>10</x>
+                     <y>110</y>
+                     <width>61</width>
+                     <height>16</height>
+                    </rect>
+                   </property>
+                   <property name="text">
+                    <string>学历占比</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_non_undergraduate_course">
+                   <property name="geometry">
+                    <rect>
+                     <x>150</x>
+                     <y>140</y>
+                     <width>181</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>XXXXX</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_112">
+                   <property name="geometry">
+                    <rect>
+                     <x>30</x>
+                     <y>140</y>
+                     <width>111</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>非本科占比：</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_undergraduate_course">
+                   <property name="geometry">
+                    <rect>
+                     <x>510</x>
+                     <y>140</y>
+                     <width>211</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>XXXXX</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_114">
+                   <property name="geometry">
+                    <rect>
+                     <x>340</x>
+                     <y>140</y>
+                     <width>161</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>本科占比：</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_HR_master">
+                   <property name="geometry">
+                    <rect>
+                     <x>170</x>
+                     <y>200</y>
+                     <width>191</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>XXXXX</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="label_116">
+                   <property name="geometry">
+                    <rect>
+                     <x>30</x>
+                     <y>200</y>
+                     <width>131</width>
+                     <height>41</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>微软雅黑</family>
+                     <pointsize>10</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>本科以上占比：</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </widget>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_recruitmentEmp">
+             <layout class="QGridLayout" name="gridLayout_13">
+              <item row="0" column="0">
+               <widget class="QScrollArea" name="scrollArea_13">
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_14">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>98</width>
+                   <height>2100</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>2100</height>
+                  </size>
+                 </property>
+                 <widget class="QLabel" name="label_102">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>71</width>
+                    <height>16</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>招聘员工</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_119">
+                  <property name="geometry">
+                   <rect>
+                    <x>30</x>
+                    <y>40</y>
+                    <width>81</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>公司简介：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QTextBrowser" name="textBrowser_recruitment_intro">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>80</y>
+                    <width>771</width>
+                    <height>371</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="readOnly">
+                   <bool>false</bool>
+                  </property>
+                  <property name="html">
+                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'PMingLiU'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_120">
+                  <property name="geometry">
+                   <rect>
+                    <x>30</x>
+                    <y>470</y>
+                    <width>81</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>招聘岗位：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_recruitment_post">
+                  <property name="geometry">
+                   <rect>
+                    <x>22</x>
+                    <y>510</y>
+                    <width>421</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_121">
+                  <property name="geometry">
+                   <rect>
+                    <x>30</x>
+                    <y>570</y>
+                    <width>81</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>岗位介绍：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QPlainTextEdit" name="plainTextEdit_recruitment_post_intro">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>610</y>
+                    <width>771</width>
+                    <height>401</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_recruitment_count">
+                  <property name="geometry">
+                   <rect>
+                    <x>22</x>
+                    <y>1080</y>
+                    <width>421</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_122">
+                  <property name="geometry">
+                   <rect>
+                    <x>30</x>
+                    <y>1040</y>
+                    <width>81</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>招聘人数：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_recruitment_money_start">
+                  <property name="geometry">
+                   <rect>
+                    <x>22</x>
+                    <y>1190</y>
+                    <width>141</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_123">
+                  <property name="geometry">
+                   <rect>
+                    <x>30</x>
+                    <y>1150</y>
+                    <width>61</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>薪资：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_124">
+                  <property name="geometry">
+                   <rect>
+                    <x>170</x>
+                    <y>1190</y>
+                    <width>61</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>——</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_recruitment_money_end">
+                  <property name="geometry">
+                   <rect>
+                    <x>240</x>
+                    <y>1190</y>
+                    <width>141</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_recruitment_address">
+                  <property name="geometry">
+                   <rect>
+                    <x>22</x>
+                    <y>1310</y>
+                    <width>741</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_125">
+                  <property name="geometry">
+                   <rect>
+                    <x>30</x>
+                    <y>1270</y>
+                    <width>81</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>工作地点：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_126">
+                  <property name="geometry">
+                   <rect>
+                    <x>30</x>
+                    <y>1390</y>
+                    <width>121</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>当前招聘状态：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QComboBox" name="comboBox_recruitment_status">
+                  <property name="geometry">
+                   <rect>
+                    <x>30</x>
+                    <y>1440</y>
+                    <width>151</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>正在招聘</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>停止招聘</string>
+                   </property>
+                  </item>
+                 </widget>
+                 <widget class="QPlainTextEdit" name="plainTextEdit_recruitment_other">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>1540</y>
+                    <width>771</width>
+                    <height>401</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_127">
+                  <property name="geometry">
+                   <rect>
+                    <x>30</x>
+                    <y>1500</y>
+                    <width>131</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>其他相关说明：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_recruitment_submit">
+                  <property name="geometry">
+                   <rect>
+                    <x>350</x>
+                    <y>1990</y>
+                    <width>101</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>发布</string>
+                  </property>
+                 </widget>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_seeResume">
+             <layout class="QGridLayout" name="gridLayout_14">
+              <item row="0" column="0">
+               <widget class="QScrollArea" name="scrollArea_14">
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_15">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>98</width>
+                   <height>1500</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>1500</height>
+                  </size>
+                 </property>
+                 <widget class="QLabel" name="label_103">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>61</width>
+                    <height>16</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>简历查看</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_resume1">
+                  <property name="geometry">
+                   <rect>
+                    <x>50</x>
+                    <y>40</y>
+                    <width>361</width>
+                    <height>431</height>
+                   </rect>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::Box</enum>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_resume2">
+                  <property name="geometry">
+                   <rect>
+                    <x>50</x>
+                    <y>510</y>
+                    <width>361</width>
+                    <height>431</height>
+                   </rect>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::Box</enum>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_resume3">
+                  <property name="geometry">
+                   <rect>
+                    <x>50</x>
+                    <y>970</y>
+                    <width>361</width>
+                    <height>431</height>
+                   </rect>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::Box</enum>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="page_3">
+    <layout class="QGridLayout" name="gridLayout_6">
+     <item row="0" column="0">
+      <widget class="QScrollArea" name="scrollArea_3">
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents_3">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>102</width>
+          <height>37</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="0">
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="title">
+            <string>合同管理</string>
+           </property>
+           <widget class="QTreeWidget" name="treeWidget">
+            <property name="geometry">
+             <rect>
+              <x>10</x>
+              <y>30</y>
+              <width>256</width>
+              <height>701</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+            </property>
+            <column>
+             <property name="text">
+              <string>合同管理模块</string>
+             </property>
+            </column>
+            <item>
+             <property name="text">
+              <string>机构管理</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>添加机构</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>机构查询</string>
+              </property>
+             </item>
+            </item>
+            <item>
+             <property name="text">
+              <string>合同管理</string>
+             </property>
+             <item>
+              <property name="text">
+               <string>新增合同类别</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>合同类别查询</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>新增合同</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>合同查询</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>已删除合同</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>合同注意事项</string>
+              </property>
+             </item>
+            </item>
+           </widget>
+           <widget class="QStackedWidget" name="stackedWidget_2">
+            <property name="geometry">
+             <rect>
+              <x>270</x>
+              <y>20</y>
+              <width>861</width>
+              <height>731</height>
+             </rect>
+            </property>
+            <property name="currentIndex">
+             <number>4</number>
+            </property>
+            <widget class="QWidget" name="page_add_mechanism">
+             <layout class="QGridLayout" name="gridLayout_11">
+              <item row="0" column="0">
+               <widget class="QScrollArea" name="scrollArea_6">
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_6">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>98</width>
+                   <height>900</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>900</height>
+                  </size>
+                 </property>
+                 <widget class="QLabel" name="label_63">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>50</y>
+                    <width>121</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>新增机构编号：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_mechanismId">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>90</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_68">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>180</y>
+                    <width>101</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>机构名称：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_mechanismName">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>220</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_mechanismSimpleName">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>360</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_69">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>320</y>
+                    <width>101</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>机构简称：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_70">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>450</y>
+                    <width>101</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>法定代表人：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_mechanismPerson">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>490</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_mechanismRegisterMoney">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>620</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_71">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>580</y>
+                    <width>91</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>注册资金：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_72">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>720</y>
+                    <width>91</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>注册地点：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_mechanismRegisterAddress">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>760</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_mechanismAdd">
+                  <property name="geometry">
+                   <rect>
+                    <x>310</x>
+                    <y>850</y>
+                    <width>121</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>添加</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_93">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>58</width>
+                    <height>15</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>添加机构</string>
+                  </property>
+                 </widget>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_search_mechanism">
+             <layout class="QGridLayout" name="gridLayout_15">
+              <item row="0" column="0">
+               <widget class="QScrollArea" name="scrollArea_7">
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_8">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>98</width>
+                   <height>28</height>
+                  </rect>
+                 </property>
+                 <widget class="QTableWidget" name="tableWidget_mechanism">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>170</y>
+                    <width>801</width>
+                    <height>331</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="selectionBehavior">
+                   <enum>QAbstractItemView::SelectRows</enum>
+                  </property>
+                  <column>
+                   <property name="text">
+                    <string>机构编号</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>机构名称</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>机构简称</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>法定代表人</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>注册资金</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>注册地</string>
+                   </property>
+                  </column>
+                 </widget>
+                 <widget class="QLabel" name="label_86">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>60</y>
+                    <width>71</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>查询：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_mechanismSearch">
+                  <property name="geometry">
+                   <rect>
+                    <x>100</x>
+                    <y>60</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="placeholderText">
+                   <string>可按数据表各列数据查找</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_91">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>130</y>
+                    <width>71</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>数据表：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_94">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>58</width>
+                    <height>15</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>机构查询</string>
+                  </property>
+                 </widget>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_add_contract_class">
+             <layout class="QGridLayout" name="gridLayout_16">
+              <item row="0" column="0">
+               <widget class="QScrollArea" name="scrollArea_8">
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_7">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>98</width>
+                   <height>28</height>
+                  </rect>
+                 </property>
+                 <widget class="QLabel" name="label_73">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>50</y>
+                    <width>161</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>新增合同类别编号：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_contractClassId">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>90</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_contractClassName">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>220</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_74">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>180</y>
+                    <width>161</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>新增合同类别名称：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_contractClassAdd">
+                  <property name="geometry">
+                   <rect>
+                    <x>300</x>
+                    <y>310</y>
+                    <width>121</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>新增</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_95">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>91</width>
+                    <height>16</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>新增合同类别</string>
+                  </property>
+                 </widget>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_search_contract_class">
+             <layout class="QGridLayout" name="gridLayout_17">
+              <item row="0" column="0">
+               <widget class="QScrollArea" name="scrollArea_9">
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_9">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>98</width>
+                   <height>28</height>
+                  </rect>
+                 </property>
+                 <widget class="QLabel" name="label_87">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>70</y>
+                    <width>71</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>查询：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_92">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>140</y>
+                    <width>71</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>数据表：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QTableWidget" name="tableWidget_contractClass">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>180</y>
+                    <width>801</width>
+                    <height>331</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <attribute name="horizontalHeaderCascadingSectionResizes">
+                   <bool>false</bool>
+                  </attribute>
+                  <attribute name="horizontalHeaderStretchLastSection">
+                   <bool>true</bool>
+                  </attribute>
+                  <column>
+                   <property name="text">
+                    <string>合同类别编号</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>合同类别名称</string>
+                   </property>
+                  </column>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_searchContractClass">
+                  <property name="geometry">
+                   <rect>
+                    <x>100</x>
+                    <y>70</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="placeholderText">
+                   <string>可按数据表各列数据查找</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_96">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>91</width>
+                    <height>16</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>合同类别查询</string>
+                  </property>
+                 </widget>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_add_contract">
+             <layout class="QGridLayout" name="gridLayout_18">
+              <item row="0" column="0">
+               <widget class="QScrollArea" name="scrollArea_10">
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_10">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>98</width>
+                   <height>2650</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>2650</height>
+                  </size>
+                 </property>
+                 <widget class="QLabel" name="label_75">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>160</y>
+                    <width>121</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>合同类别编号：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_addcontract_contractId">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>200</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_addcontract_id">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>70</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_76">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>30</y>
+                    <width>91</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>合同编号：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_77">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>300</y>
+                    <width>91</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>合同类别：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_addcontract_contractClass">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>340</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_78">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>440</y>
+                    <width>91</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>机构编号：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_addcontract_mechanismId">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>480</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_addcontract_mechanismName">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>610</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_79">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>570</y>
+                    <width>91</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>机构名称：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_80">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>710</y>
+                    <width>121</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>合同开始时间：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_81">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>850</y>
+                    <width>121</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>合同结束时间：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QDateEdit" name="dateEdit_contract_start">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>750</y>
+                    <width>181</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                 </widget>
+                 <widget class="QDateEdit" name="dateEdit_contract_end">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>890</y>
+                    <width>181</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                 </widget>
+                 <widget class="QDateEdit" name="dateEdit_contract_submit">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>1020</y>
+                    <width>181</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_82">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>980</y>
+                    <width>311</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>合同提交时间（新增这条合同的时间）：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_contract_submitName">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>1150</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_83">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>1110</y>
+                    <width>81</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>提交人：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_84">
+                  <property name="geometry">
+                   <rect>
+                    <x>40</x>
+                    <y>1250</y>
+                    <width>191</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>合同内容（扫描内容）：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_contract_positive">
+                  <property name="geometry">
+                   <rect>
+                    <x>110</x>
+                    <y>1300</y>
+                    <width>531</width>
+                    <height>611</height>
+                   </rect>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::Box</enum>
+                  </property>
+                  <property name="text">
+                   <string>正面</string>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_contract_signature">
+                  <property name="geometry">
+                   <rect>
+                    <x>110</x>
+                    <y>1940</y>
+                    <width>531</width>
+                    <height>611</height>
+                   </rect>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::Box</enum>
+                  </property>
+                  <property name="text">
+                   <string>内容（签字面）</string>
+                  </property>
+                  <property name="scaledContents">
+                   <bool>true</bool>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_upload_contract_positive">
+                  <property name="geometry">
+                   <rect>
+                    <x>660</x>
+                    <y>1880</y>
+                    <width>93</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>上传</string>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_upload_contract_signature">
+                  <property name="geometry">
+                   <rect>
+                    <x>660</x>
+                    <y>2520</y>
+                    <width>93</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>上传</string>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_add_contract">
+                  <property name="geometry">
+                   <rect>
+                    <x>300</x>
+                    <y>2590</y>
+                    <width>121</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>新增合同</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_97">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>61</width>
+                    <height>16</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>新增合同</string>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_del_contract_text">
+                  <property name="geometry">
+                   <rect>
+                    <x>690</x>
+                    <y>1250</y>
+                    <width>93</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>清除内容</string>
+                  </property>
+                 </widget>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_search_contract">
+             <layout class="QGridLayout" name="gridLayout_19">
+              <item row="0" column="0">
+               <widget class="QScrollArea" name="scrollArea_11">
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_12">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>98</width>
+                   <height>28</height>
+                  </rect>
+                 </property>
+                 <widget class="QLabel" name="label_65">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>58</width>
+                    <height>15</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>合同查询</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_98">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>70</y>
+                    <width>71</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>查询：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_99">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>140</y>
+                    <width>71</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>数据表：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_search_contract">
+                  <property name="geometry">
+                   <rect>
+                    <x>100</x>
+                    <y>70</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="placeholderText">
+                   <string>可按数据表各列数据查找</string>
+                  </property>
+                 </widget>
+                 <widget class="QTableWidget" name="tableWidget_contract">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>180</y>
+                    <width>801</width>
+                    <height>331</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="selectionBehavior">
+                   <enum>QAbstractItemView::SelectRows</enum>
+                  </property>
+                  <attribute name="horizontalHeaderStretchLastSection">
+                   <bool>true</bool>
+                  </attribute>
+                  <column>
+                   <property name="text">
+                    <string>合同编号</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>合同类别编号</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>合同类别</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>提交人</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>提交时间</string>
+                   </property>
+                  </column>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_del_all_contract">
+                  <property name="geometry">
+                   <rect>
+                    <x>682</x>
+                    <y>520</y>
+                    <width>121</width>
+                    <height>28</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>删除所有合同</string>
+                  </property>
+                 </widget>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_has_del_contract">
+             <layout class="QGridLayout" name="gridLayout_20">
+              <item row="0" column="0">
+               <widget class="QScrollArea" name="scrollArea_15">
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_16">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>98</width>
+                   <height>28</height>
+                  </rect>
+                 </property>
+                 <widget class="QLabel" name="label_67">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>101</width>
+                    <height>16</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>已删除的合同</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_105">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>70</y>
+                    <width>71</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>查询：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="label_106">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>140</y>
+                    <width>71</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>微软雅黑</family>
+                    <pointsize>10</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>数据表：</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_search_del_contract_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>100</x>
+                    <y>70</y>
+                    <width>301</width>
+                    <height>41</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="placeholderText">
+                   <string>可按数据包各列数据查找</string>
+                  </property>
+                 </widget>
+                 <widget class="QTableWidget" name="tableWidget_del_contract_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>180</y>
+                    <width>801</width>
+                    <height>331</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="selectionBehavior">
+                   <enum>QAbstractItemView::SelectRows</enum>
+                  </property>
+                  <column>
+                   <property name="text">
+                    <string>合同编号</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>合同类别编号</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>合同类别</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>提交人</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>提交时间</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>删除时间</string>
+                   </property>
+                  </column>
+                 </widget>
+                 <widget class="QPushButton" name="pushButton_del_all_contract_2">
+                  <property name="geometry">
+                   <rect>
+                    <x>680</x>
+                    <y>520</y>
+                    <width>121</width>
+                    <height>28</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>恢复所有</string>
+                  </property>
+                 </widget>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_contract_tip">
+             <layout class="QGridLayout" name="gridLayout_21">
+              <item row="0" column="0">
+               <widget class="QScrollArea" name="scrollArea_16">
+                <property name="widgetResizable">
+                 <bool>true</bool>
+                </property>
+                <widget class="QWidget" name="scrollAreaWidgetContents_17">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>98</width>
+                   <height>28</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>0</height>
+                  </size>
+                 </property>
+                 <widget class="QLabel" name="label_85">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>10</y>
+                    <width>101</width>
+                    <height>16</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string>合同注意事项</string>
+                  </property>
+                 </widget>
+                 <widget class="QTextBrowser" name="textBrowser">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>40</y>
+                    <width>791</width>
+                    <height>671</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+                  </property>
+                  <property name="html">
+                   <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'PMingLiU'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:large; font-weight:600; color:#333333; background-color:#ffffff;&quot;&gt;签订合同书的一些注意事项&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;1、双方名称或姓名和住所列明当事人的全称、地址、电话、开户银行及帐号。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;2、标的动产应标明名称、型号、规格、品种、等级、花色等；不易确定的无形财产、劳务、工作成果等描述要准确、明白；不动产应注明名称和座落地点。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;3、数量数量要清楚、准确，计量单位、方法和工具符合国家或者行业规定。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;4、质量国家有强制性标准的，要明确标准代号全称。可能有多种适用标准的，要在合同中明确适用哪一种，并明确质量检验的方法、责任期限和条件、质量异议期限和条件等。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;5、价款或报酬合同明确规定价款或报酬数额、计算标准、结算方式和程序。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;6、履约期限、地点或方式履行期限要具体明确，地点应冠以省、市、县名称，交付标的物方式、劳务提供方式和结算方式应具体、清楚。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;7、违约责任应明确规定违约责任，赔偿金数额或具体计算方法。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;8、解决争议的方法选择诉讼或者仲裁其中之一作为争议解决方法，不要出现既由法院管辖又由仲裁机构裁决，也不要出现“由法院管辖或者仲裁机构仲裁”的条款。约定通过诉讼解决的，还可以约定管辖法院；约定由仲裁机构裁决的，应写明具体仲裁机构名称。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;9、合同生效条款一般应当写明：“合同自合同双方（或者各方）法定代表人或者授权代表签字并加盖单位公章（合同专用章）之日起生效”。如合同有固定期限的，还应当写明：“本合同有效期自某年某月某日至某年某月某日止。对于法律法规&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333;&quot;&gt;规定应当经批准或者登记后生效的，或者合同约定须经公证等生效条件的，应当在合同中写明并及时办理相关手续。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;10、清洁文本条款合同中应当写明：“本合同正文为清洁打印文本，如双方对此合同有任何修改及补充均应另行签订补充协议。合同正文中任何非打印的文字或者图形，除非经双方确认同意，不产生约束力。”在签署过程中，应注意：当合同中有清洁文本条款时，合同中的所有条款文字与数字（签署人签字、时间签署与盖章除外）均应当事先打印完成，不得在合同签字过程中出现合同正文里有手写文字或者空白未填写的情况存在。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:large; font-weight:600; color:#333333; background-color:#ffffff;&quot;&gt;合同审核要点及方法&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'宋体'; font-size:large; font-weight:600; color:#333333; background-color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#333333;&quot;&gt;第一方面：决策审查过程&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;含义：依据组织的长远规划、战略目标、近期工作计划，对相关项目进行市场、政策、方向等方面的评估，进而对合同缔约目的、预期效果进行决策性分析，形成合同起草指导意见，并对合同草稿进行立意审查的过程。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;该项审查实质上是前合同事务，但对合同的起草修改起至关重要的作用。其责任部门为组织的最高决策机构。法律&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333;&quot;&gt;事务机构以及相关职能机构可以提供咨询建议。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;该阶段，合同审查者注意事项：&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;1、把握合同的缔约目的，围绕缔约目的设定权利义务。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;缔约目的是合同的灵魂，没有缔约目的也就不存在合同。所以，理解并具体化缔约目的是起草合同的首要任务，如果目的都搞错了，就算权利义务设定的再完美，操作流程再严密都不会达到预期的效果，也会使得合同完全失去原有的意义。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;在搞清缔约目的的基础上，要把握好指导思想，设定正确的权利义务走向和平衡，综合考虑对合同操作有影响的市场条件、政策环境等因素，使合同的内容和操作围绕缔约目的发挥作用，否则将使合同产生“先天缺陷”，引发“后天不足”。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;2、考虑合同订立后的可变更可能。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;当今社会，瞬息万变，且不说自然事件和社会因素非我们自然人或单个组织能力所能抗拒的不可抗力外，就连市场主体自身的变革或变化有时也是让人意想不到的，并且无法预测。所以，我们在订立合同时，必须要考虑到法律//教育网合同订立后履约过程中所可能发生的一些影响合同正常履行的因素。如自然事件中的台风、洪水等不可抗力事件，社会因素中的国家法律政策调整、市场价格重大波动等重大情势变更事项，微观方面可能遇到的合同一方当事人死亡、企业终止清算、破产倒闭或重组并购等事项。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;未雨绸缪，起草或审核合同时，对影响合同变动的因素考虑得越周密细致，就越能避免纠纷，当事人的合同权益也就越容易得到保障。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#333333;&quot;&gt;第二方面：主体审查过程&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;含义：依据相关政策法规&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333;&quot;&gt;、合同缔约要求、相关技术标准，对签约双方进行主体资格、项目资质、缔约信誉、资信能力、人员构成等方面的审查过程。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;该项审查实际上是从合同衍生出来的相关审查项目，其责任部门为组织的职能机构、法律事务机构。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;该过程中，审查者注意事项：&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;1、注意合同主体的合法和真实。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;市场经济强调缔约自由，为了追求利润，许多组织采取各种欺诈的手法，制造主体合法、真实的假相，达到签约（欺诈）的目的，严重干扰了市场秩序。虽然，从法律上讲，因该种动机签订的合同无效，而且可以依照相关救济条款进行责任追究。但是同样会给组织带来人力、物力、财力上的重大损失。所以合同主体的合法真实是合同审查的重要项目之一，是关系合同目的能否实现的前提之一。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;另外，还要注意审核或确认负责签订合同的单位或个人是否已取得相应的合法授权，以防止无权代理或超越代理权限订立合同的情形存在。当然，自已一方的主体是否适格（例如不是独立法人、法人名称不对、印章和名称不一致等），也要进行审查，防止所签订的合同无效。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;2、注意合同主体是否具备相关的资质或许可。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;对某些业务领域，按照相关的法律或法规规定，需要合同一方或双方主体必须具备相应的资质或经营许可才可从事。如建设工程设计合同需要国家建设部门核发的设计资质、建设施工合同要求业主有“报建”的整套资料、物业服务管理合同需要物业管理资质、部分外贸或进出口合同需要的行业特殊代理权资质或经营许可、从事房地产开发业务需要开发资质、从事药品生产或经营需要药品批号、生产或卫生许可等。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;对实行资质管理或特殊许可的业务，若签约一方不具备相应的从业资质或经营许可，由此所订立的合同一般属于违反国家法律法规&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333;&quot;&gt;的合同。一旦纠纷产生，容易被确认为无效合同。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;另外采用假的资质进行欺诈也是很常见的。审查相关资质和许可要求审查者深入了解相关专业知识。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;3、注意对资信能力、业绩、人员等进行审查。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;一个组织的资信能力是影响其履约能力的重要因素，一个规模较大、信誉良好、业绩出色的组织同样有可能因为资金周转的问题而影响其具体项目的操作，从而可能造成缔约方的损失，轻则延误履行期限，重则违约不能履行。因此，重大工程项目、重要项目或者较大额度的采购等合同要求对方出具履约保证金函，这样才能从资信上促进对方积极履约。另外在后期质量保证期内，要求对方出具质保金、保函是当前普遍的、可行的方法。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;另外，过往业绩和人员素质也是缔约目的实现的保障之一，对业绩和人员的资料审查应该列入合同关键审查项目之一。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#333333;&quot;&gt;第三方面：可行性审查过程。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;含义：依据法律法规、行业规定、缔约目的，综合考虑组织所处环境、软硬件条件、操作习惯等，对合同标的、设定履行方式、技术要求等内容，进行可操作性审查，确保合同履行能实际履行的过程。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;该项审查责任部门为企业职能机构和法律事务机构。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;该过程中，审查者注意事项：&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;1、合同标的约定要求详细、明确，做到指向对象具体。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;合同的标的是最能体现缔约目的、合同性质的核心内容，相当于我们写文章时所表述的文章中心思想。所以，我们在起草合同时，最好要单独写明“合同标的”这样一条内容，以便让人一看便知合同的大概内容。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;从法律功用角度讲，通过“合同标的”条款还能够更好地界定合同的性质。对“合同标的”的描述务必要达到“准确、简练、清晰”的标准要求，切忌含混不清。如对合同标的为货物买卖的，一定要写明货物的名称、品牌、计量单位和价格，切忌只写“购买沙子一车”之类的含糊描述；如对合同标的是提供服务的，一定要写明服务的质量、标准或效果要求等，切忌只写“按照行业的通常标准提供服务或达到行业通常的服务标准要求等”之类的描述。否则，一旦纠纷产生，往往就造成“合同约定不明”的状况。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;2、合同的履行方式一定要具有可操作性。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;围绕缔约目的设定的合同双方的履行方式、操作流程是合同标的实现的关键，不同性质、类别的合同在履行上有不同的方式，如采购合同的货物转移；工程施工合同的进度施工；技术开发合同的知识产权转移；安装合同的设备交付使用等，但各类合同的履行也有其共同的地方，根据合同双方履行的一般过程，主要涉及以下几个方面内容：履行期限、履行地点、标的完成（运输）方式、保险、付款方式、质量保证等等，这些内容的设定一定要结合组织的实际来进行，如期限要和相关项目紧密配合、地点设定要遵循便利原则、付款要以促进标的完成为目标、质保期和质保金要合理有效等。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;3、对合同相关事项内容要有相应约定。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;相对于合同主体、标的、技术标准等重要合同内容来说，有些合同内容很容易被忽视，甚至在合同中完全没有体现，如不可抗力、合同保密、技术开发、质量保证等等，其实从合同履行的可行性上来说，这些也是极其重要的，例如在工程建设合同中，不可抗力发生的机率就非常之高，而因此损失的承担是一个需要严格界定，而又没有相关统一标准的，容易产生纠纷的内容之一，因此对其进行周密的预计，和详细的规定也就成为提高合同可行性的需要了。同样道理合同保密、质量保证、技术开发等内容虽然不和合同标的直接发生联系，但是却是有违缔约目的的内容，需要从缔约目的和后期利益的角度对其相关条款加以重视和完善。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#333333;&quot;&gt;第四方面：合法性审查过程&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;含义：依据相关法规、规定、缔约项目性质、行业操作规定，对合同标的、条款内容、法律术语、签订方式、履行条件、要否登记等相关事项是否与之冲突，致使合同无效的情况进行审查的过程。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;该项审查责任部门为企业法律事务机构。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;该过程中，审查者注意事项：&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;1、不同合同性质类别具有各种特殊性。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;依据缔约目的的性质，合同法&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333;&quot;&gt;把合同分成了15个大类，并进行了相关内容的具体规定，对合同起草者或审查者来说，这是法定依据。其实在日常合同具体事务中，我们还可以按照不同的标准，对合同进行更加具体的分类，便于事务操作。合同的类别不同，合同的性质自然也就不同。对合同进行分类的意义就在于能够充分认识到不同类别合同的特殊性，从而在起草或审核合同时提醒我们需要特别注意的某些合同内容或要素，如合同的主体资格、生效要件、付款方式、售后服务及保密事项等条款内容。另外，针对合同的特殊性，当事人还可以就各方的权利或义务作出一些特别的约定。对这些特殊的约定一定要尽可能地表述完整准确，要注意其合法性问题，避免与现行法律规定相抵触或冲突。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;2、法律用语的准确是合法性审查的重要内容。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;当事人之间订立的书面合同属于非常严肃的法律文件，其中许多内容需要以法律术语加以界定和规范，使合同的内容明确、清晰，不会产生歧义、异议，另外对有些容易产生纠纷的地方，相关法律法规、行业规定用法律语言都作出了明确细致的规定。所以，在起草或审核合同时应当按照法律文件的一些书写标准或要求去做，其中包括尽可能地使用或推广大家共同认可的一些规范性法律//教育网法律用语，以避免大家在理解合同时产生不应有的歧义。如在审核合同时，发现一些常见的法律用语错误像“定金”与“订金”不分、“权利”与“权力”混淆、“抵押”与“质押”混用的情形等。另外，还发现不少合同中出现类似“一方对另一方罚款”等明显违反“合同各方法律主体地位平等”的用语或表述。其实，上述每个法律用语都是有其特别含义的，随意滥用可能要闹笑话，甚至直接影响到合同内容的有效性和当事人需承担的法律责任之大小。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#333333;&quot;&gt;第五方面：风险性审查过程&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;含义：依据缔约性质、类型、习惯以及市场情况，对缔约目的、合同履行、不可抗力等方面进行风险预测评估，并作出相关调整修改的过程。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;该项审查责任部门为企业最高决策机构，法律事务机构以及相关职能机构提供咨询建议。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;该过程中，审查者注意事项：&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;1、注意各方责任分担的合理。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;诚实信用、等价有偿、买卖公平是市场交易的基本法则，在合同的具体内容中必须能够体现这些法则。我们在起草或审核合同时，切忌只片面强调一方当事人的权利而忽略其义务或片面强调一方当事人的义务而忽略其权利的情形。因为按照合同法关于“合同对价”的基本要求，一方当事人享有权利必须以承担一定的义务为前提，反之就是一方当事人承担义务必须以享有一定的权利为基础。法律禁止以强凌弱的“不平等条约”存在；对责任分担显失公平的合同，合同法赋予受不公平条款约束的一方当事人一定期限内的合同撤销权。尤其是起草涉及多方利益的“格式合同”时，一定要注意各方责任分担的合理性，切忌侵害多数人利益的“霸王条款”出现。因为在合同约定中，若各方责任分担不合理，不仅有违基本的商业道德，而且一旦产生纠纷，此类条款很容易成为众矢之的，从而毁坏商家的信誉，且容易被法院或仲裁机构确认为无效条款。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;2、注意交易实施的安全。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;当事人之间订立书面合同的目的就是明确交易各方的权利义务关系，更好地保证交易实施的安全。所以，在起草或审核合同时应特别注意能够保障交易顺利实现的条款内容。如当事人选择的付款期限和付款方式条款、合同履行的担保条款等是否存在不符合实际或无法保证交易安全的情形。尤其是在大宗货物买卖、不动产买卖和国际贸易类的合同中，这些条款内容显得尤为重要。另外，有关合同的签订地、履行地（如交货地点等）标的物所在地及合同纠纷的管辖地、解决方式等条款内容如何约定也直接关系到交易的能否顺利实现或交易的安全，在给当事人起草或审核合同时同样不要忽视此类条款内容。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;3、注意考虑合同纠纷发生的可能。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;当事人之间通过订立合同所建立的是一种动态的债权或债务关系，一方权利之实现有赖于另一方义务之履行；换句话说，合同之债仅是一种信用上的法律关系，若合同一方当事人违反“诚实信用”原则，则另一方当事人的权利就存在灭失的可能性，尽管其可以通过法律上的救济途径来保障其权利实现。但由于合同之权利是一种私权利，法律对私权利进行保护的主要依据就是当事人之间订立的合同。所以，要求起草或审核合同的人员必须具备“法律的头脑”和“商业的意识”，在起草或审核合同时一定要充分考虑到发生合同纠纷的法律风险，在合同中尽可能的将双方的权利义务及违约责任条款约定清楚。这样，即便将来真地发生纠纷，依据合同约定的内容也比较容易确定各方所应承担的法律责任，尽可能地避免法官滥用司法上的自由裁量权。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; font-weight:600; color:#333333;&quot;&gt;第六方面：完整性审查过程。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;含义：依据合同法、合同范本&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333;&quot;&gt;、行业规定、交易习惯以及双方缔约目的，就合同条款的完整、内容的全面、权利义务的一致等方面，进行审查的过程。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;该项审查责任部门为企业法律事务机构。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:large; font-weight:600; color:#333333; background-color:#ffffff;&quot;&gt;有偿合同中违反无偿服务怎么办？&lt;/span&gt;&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'宋体'; font-size:large; font-weight:600; color:#333333; background-color:#ffffff;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;在市场竞争日趋激烈的今天，价格已不再是商家制胜的唯一法宝，精明的商家纷纷展开了“服务质量”的大战。别的不说，单这家电行业的服务就在不断的推陈出新，先是“传统服务”型—及时的售后安装、免费保修、终身维护服务，接着延伸到“顾客满意服务”型—要求服务人员上门须先出示服务监督卡、穿套鞋、电话回访，制定修理时间等，以保障免费服务的质量，将售后服务作为竞争的重要手段之一。众多消费者在购买商品的同时，也越来越注意售后服务，有的甚至将拥有何种服务作为其选购商品的决定因素之一。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;然而，商家承诺的保修服务、消费者看重的免费服务在法律&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333;&quot;&gt;上的效力到底如何呢？在合同实际履行中应提供无偿服务的一方拒绝服务，是否构成违约？是否应当承担违约责任呢？商家与消费者却各持己见、众说不一。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;本案主要涉及有偿合同中违反无偿服务约定是否应当承担违约责任的问题。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;无偿服务是指合同一方当事人自愿利用自己的特长免费向对方当事人提供帮助，以解决对方当事人的需要。在有偿合同中，有时双方当事人约定一方向另一方提供一定的、无偿的技术或劳务服务，以满足对方的需要。在本案中，应提供无偿服务的乙公司拒绝提供该服务时已明显构成违约，应当依法承担相应的违约责任。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;理由如下：&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;一、写入合同中的条款都是合同条款，不应以有偿无偿来划分是否是合同条款，在这一点上有偿合同、无偿合同是一样的。无偿服务既然列入合同条款，就不应当以是否有偿来确定是否违约，而应按照是否全部履行来衡量，履行合同只要不符合合同条款就是违约。这也是符合严格履行的合同原则的。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;二、违约应承担违约责任是法律的规定。《合同法&lt;/span&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333;&quot;&gt;》第第一百零七条规定：当事人一方不履行合同义务或者履行义务不符合约定的，应当承担继续履行、采取补救措施或者赔偿损失等违约责任。也就是说要按照合同的约定，完整、全面、准确地履行合同约定的义务，坚持合同的全部履行原则。任何一种不履行合同义务的行为，都是违约行为，都构成违约。&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; background-color:#ffffff;&quot;&gt;&lt;span style=&quot; font-family:'宋体'; font-size:12pt; color:#333333; background-color:#ffffff;&quot;&gt;三、一方向另一方提供的服务尽管是无偿的，可一但写入合同中就不能再按一般的口头承诺一样对待了。因为，合同当事人在签订合同时应当是相当慎重的，每个条款之间都有一定的关联，无论在权利上还是在义务上，都存在着一定的平衡性，如果一方不履行约定的义务，即使是无偿的义务，也会打破合同中的这种平衡性，从而给对方造成损失。&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="page_4">
+    <layout class="QGridLayout" name="gridLayout_8">
+     <item row="0" column="0">
+      <widget class="QScrollArea" name="scrollArea_4">
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents_4">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>98</width>
+          <height>37</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <item row="0" column="0">
+          <widget class="QGroupBox" name="groupBox_4">
+           <property name="title">
+            <string>查看</string>
+           </property>
+           <widget class="QListWidget" name="listWidget_see">
+            <property name="geometry">
+             <rect>
+              <x>20</x>
+              <y>70</y>
+              <width>1091</width>
+              <height>641</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>17</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_fresh">
+            <property name="geometry">
+             <rect>
+              <x>1020</x>
+              <y>20</y>
+              <width>93</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>刷新</string>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="page_5">
+    <layout class="QGridLayout" name="gridLayout_10">
+     <item row="0" column="0">
+      <widget class="QScrollArea" name="scrollArea_5">
+       <property name="widgetResizable">
+        <bool>true</bool>
+       </property>
+       <widget class="QWidget" name="scrollAreaWidgetContents_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>98</width>
+          <height>37</height>
+         </rect>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_9">
+         <item row="0" column="0">
+          <widget class="QGroupBox" name="groupBox_5">
+           <property name="title">
+            <string>设置</string>
+           </property>
+           <widget class="QLineEdit" name="lineEdit_new_passwd">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>110</y>
+              <width>301</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_128">
+            <property name="geometry">
+             <rect>
+              <x>80</x>
+              <y>110</y>
+              <width>71</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>新密码</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QGroupBox" name="groupBox_10">
+            <property name="geometry">
+             <rect>
+              <x>30</x>
+              <y>320</y>
+              <width>1081</width>
+              <height>321</height>
+             </rect>
+            </property>
+            <property name="title">
+             <string>公司logo</string>
+            </property>
+            <widget class="QLabel" name="label_108">
+             <property name="geometry">
+              <rect>
+               <x>440</x>
+               <y>30</y>
+               <width>101</width>
+               <height>31</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>公司logo：</string>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_headImg">
+             <property name="geometry">
+              <rect>
+               <x>340</x>
+               <y>90</y>
+               <width>301</width>
+               <height>111</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>微软雅黑</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: rgb(197, 237, 255);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="pushButton_uploadLOGO">
+             <property name="geometry">
+              <rect>
+               <x>450</x>
+               <y>230</y>
+               <width>101</width>
+               <height>41</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string>上传</string>
+             </property>
+            </widget>
+           </widget>
+           <widget class="QLabel" name="label_90">
+            <property name="geometry">
+             <rect>
+              <x>80</x>
+              <y>40</y>
+              <width>71</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>旧密码</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_new_passwd_again">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>180</y>
+              <width>301</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLineEdit" name="lineEdit_old_passwd">
+            <property name="geometry">
+             <rect>
+              <x>160</x>
+              <y>40</y>
+              <width>301</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgba(255, 255, 255, 100);</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="placeholderText">
+             <string/>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_129">
+            <property name="geometry">
+             <rect>
+              <x>60</x>
+              <y>180</y>
+              <width>91</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="font">
+             <font>
+              <family>微软雅黑</family>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>确认新密码</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+           <widget class="QPushButton" name="pushButton_alter_passwd">
+            <property name="geometry">
+             <rect>
+              <x>570</x>
+              <y>180</y>
+              <width>101</width>
+              <height>41</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>修改</string>
+            </property>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

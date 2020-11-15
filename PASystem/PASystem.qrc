@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/PASystem"/>
+    <qresource prefix="/img">
+        <file alias="login_back1">Resources/images/login_back.jpg</file>
+    </qresource>
+</RCC>

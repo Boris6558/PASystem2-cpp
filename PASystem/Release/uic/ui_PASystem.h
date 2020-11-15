@@ -1,0 +1,575 @@
+/********************************************************************************
+** Form generated from reading UI file 'PASystem.ui'
+**
+** Created by: Qt User Interface Compiler version 5.13.0
+**
+** WARNING! All changes made in this file will be lost when recompiling UI file!
+********************************************************************************/
+
+#ifndef UI_PASYSTEM_H
+#define UI_PASYSTEM_H
+
+#include <QtCore/QVariant>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QCheckBox>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QGroupBox>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QPlainTextEdit>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QScrollArea>
+#include <QtWidgets/QStackedWidget>
+#include <QtWidgets/QWidget>
+#include "mlabel.h"
+
+QT_BEGIN_NAMESPACE
+
+class Ui_PASystemClass
+{
+public:
+    QGridLayout *gridLayout;
+    QStackedWidget *stackedWidget;
+    QWidget *page_login_2;
+    QLineEdit *lineEdit_login_passwd_2;
+    QLineEdit *lineEdit_login_name_2;
+    QPushButton *pushButton_login_2;
+    QLabel *label_3;
+    MLabel *label_register_2;
+    QLabel *label_4;
+    MLabel *label_forget_passwd_2;
+    QCheckBox *checkBox_remember_passwd_2;
+    QCheckBox *checkBox_auto_login_2;
+    QLabel *label;
+    QWidget *page_register_2;
+    QScrollArea *scrollArea_2;
+    QWidget *scrollAreaWidgetContents_2;
+    QGroupBox *groupBox;
+    QLabel *label_name_11;
+    QLineEdit *lineEdit_team_name_2;
+    QLabel *label_name_12;
+    QLabel *label_5;
+    QPushButton *pushButton;
+    QLineEdit *lineEdit_team_name_3;
+    QLabel *label_name_13;
+    QLabel *label_name_14;
+    QPlainTextEdit *plainTextEdit;
+    QLabel *label_name_15;
+    QLineEdit *lineEdit_team_name_4;
+    QLabel *label_name_16;
+    QComboBox *comboBox_province_2;
+    QLabel *label_name_17;
+    QLineEdit *lineEdit_team_name_5;
+    QLabel *label_name_18;
+    QLineEdit *lineEdit_team_name_6;
+    QLabel *label_name_19;
+    QLineEdit *lineEdit_team_name_7;
+    QLabel *label_name_20;
+    QLineEdit *lineEdit_team_name_8;
+    QLabel *label_name_21;
+    QComboBox *comboBox_province_3;
+    QGroupBox *groupBox_2;
+    QLineEdit *lineEdit_team_name_9;
+    QLabel *label_name_22;
+    QLineEdit *lineEdit_team_name_10;
+    QLabel *label_name_23;
+    QLabel *label_name_24;
+    QLineEdit *lineEdit_team_name_11;
+    QLabel *label_name_25;
+    QLabel *label_name_26;
+    QLabel *label_name_27;
+    QLabel *label_name_28;
+    QLineEdit *lineEdit_team_name_12;
+    QLineEdit *lineEdit_team_name_13;
+    QLabel *label_name_29;
+    QLabel *label_name_30;
+    QLineEdit *lineEdit_team_name_14;
+    QLabel *label_name_31;
+    QLabel *label_name_32;
+    QPlainTextEdit *plainTextEdit_2;
+    QLabel *label_name_33;
+    QGroupBox *groupBox_3;
+    QLabel *label_name_34;
+    QLabel *label_6;
+    QPushButton *pushButton_2;
+    QGroupBox *groupBox_4;
+    QLineEdit *lineEdit_team_name_15;
+    QLineEdit *lineEdit_team_name_16;
+    QLabel *label_name_35;
+    QLabel *label_name_36;
+    QPushButton *pushButton_3;
+    MLabel *label_provision_2;
+    QCheckBox *checkBox_2;
+    QPushButton *pushButton_back_2;
+
+    void setupUi(QWidget *PASystemClass)
+    {
+        if (PASystemClass->objectName().isEmpty())
+            PASystemClass->setObjectName(QString::fromUtf8("PASystemClass"));
+        PASystemClass->resize(1233, 831);
+        gridLayout = new QGridLayout(PASystemClass);
+        gridLayout->setSpacing(6);
+        gridLayout->setContentsMargins(11, 11, 11, 11);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        stackedWidget = new QStackedWidget(PASystemClass);
+        stackedWidget->setObjectName(QString::fromUtf8("stackedWidget"));
+        page_login_2 = new QWidget();
+        page_login_2->setObjectName(QString::fromUtf8("page_login_2"));
+        lineEdit_login_passwd_2 = new QLineEdit(page_login_2);
+        lineEdit_login_passwd_2->setObjectName(QString::fromUtf8("lineEdit_login_passwd_2"));
+        lineEdit_login_passwd_2->setGeometry(QRect(450, 430, 361, 51));
+        QFont font;
+        font.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font.setPointSize(10);
+        lineEdit_login_passwd_2->setFont(font);
+        lineEdit_login_passwd_2->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 100);"));
+        lineEdit_login_passwd_2->setEchoMode(QLineEdit::Password);
+        lineEdit_login_name_2 = new QLineEdit(page_login_2);
+        lineEdit_login_name_2->setObjectName(QString::fromUtf8("lineEdit_login_name_2"));
+        lineEdit_login_name_2->setGeometry(QRect(450, 310, 361, 51));
+        lineEdit_login_name_2->setFont(font);
+        lineEdit_login_name_2->setStyleSheet(QString::fromUtf8("background-color: rgba(255, 255, 255, 100);"));
+        pushButton_login_2 = new QPushButton(page_login_2);
+        pushButton_login_2->setObjectName(QString::fromUtf8("pushButton_login_2"));
+        pushButton_login_2->setGeometry(QRect(550, 520, 151, 51));
+        pushButton_login_2->setFont(font);
+        label_3 = new QLabel(page_login_2);
+        label_3->setObjectName(QString::fromUtf8("label_3"));
+        label_3->setGeometry(QRect(380, 310, 71, 51));
+        label_3->setFont(font);
+        label_3->setAlignment(Qt::AlignCenter);
+        label_register_2 = new MLabel(page_login_2);
+        label_register_2->setObjectName(QString::fromUtf8("label_register_2"));
+        label_register_2->setGeometry(QRect(750, 520, 41, 31));
+        QFont font1;
+        font1.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font1.setPointSize(9);
+        font1.setUnderline(true);
+        label_register_2->setFont(font1);
+        label_register_2->setAlignment(Qt::AlignCenter);
+        label_4 = new QLabel(page_login_2);
+        label_4->setObjectName(QString::fromUtf8("label_4"));
+        label_4->setGeometry(QRect(380, 430, 71, 51));
+        label_4->setFont(font);
+        label_4->setAlignment(Qt::AlignCenter);
+        label_forget_passwd_2 = new MLabel(page_login_2);
+        label_forget_passwd_2->setObjectName(QString::fromUtf8("label_forget_passwd_2"));
+        label_forget_passwd_2->setGeometry(QRect(750, 550, 71, 21));
+        label_forget_passwd_2->setFont(font1);
+        label_forget_passwd_2->setAlignment(Qt::AlignCenter);
+        checkBox_remember_passwd_2 = new QCheckBox(page_login_2);
+        checkBox_remember_passwd_2->setObjectName(QString::fromUtf8("checkBox_remember_passwd_2"));
+        checkBox_remember_passwd_2->setGeometry(QRect(410, 520, 91, 21));
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font2.setPointSize(9);
+        checkBox_remember_passwd_2->setFont(font2);
+        checkBox_auto_login_2 = new QCheckBox(page_login_2);
+        checkBox_auto_login_2->setObjectName(QString::fromUtf8("checkBox_auto_login_2"));
+        checkBox_auto_login_2->setGeometry(QRect(410, 550, 91, 21));
+        checkBox_auto_login_2->setFont(font2);
+        label = new QLabel(page_login_2);
+        label->setObjectName(QString::fromUtf8("label"));
+        label->setGeometry(QRect(170, 60, 911, 211));
+        label->setFrameShape(QFrame::Box);
+        label->setScaledContents(true);
+        stackedWidget->addWidget(page_login_2);
+        page_register_2 = new QWidget();
+        page_register_2->setObjectName(QString::fromUtf8("page_register_2"));
+        scrollArea_2 = new QScrollArea(page_register_2);
+        scrollArea_2->setObjectName(QString::fromUtf8("scrollArea_2"));
+        scrollArea_2->setGeometry(QRect(0, 50, 1211, 751));
+        scrollArea_2->setWidgetResizable(true);
+        scrollAreaWidgetContents_2 = new QWidget();
+        scrollAreaWidgetContents_2->setObjectName(QString::fromUtf8("scrollAreaWidgetContents_2"));
+        scrollAreaWidgetContents_2->setGeometry(QRect(0, 0, 1188, 3700));
+        scrollAreaWidgetContents_2->setMinimumSize(QSize(500, 3700));
+        groupBox = new QGroupBox(scrollAreaWidgetContents_2);
+        groupBox->setObjectName(QString::fromUtf8("groupBox"));
+        groupBox->setGeometry(QRect(10, 10, 1171, 1981));
+        label_name_11 = new QLabel(groupBox);
+        label_name_11->setObjectName(QString::fromUtf8("label_name_11"));
+        label_name_11->setGeometry(QRect(170, 40, 161, 41));
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font3.setPointSize(11);
+        font3.setBold(true);
+        font3.setWeight(75);
+        label_name_11->setFont(font3);
+        label_name_11->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        lineEdit_team_name_2 = new QLineEdit(groupBox);
+        lineEdit_team_name_2->setObjectName(QString::fromUtf8("lineEdit_team_name_2"));
+        lineEdit_team_name_2->setGeometry(QRect(350, 40, 531, 41));
+        QFont font4;
+        font4.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        font4.setPointSize(10);
+        font4.setBold(true);
+        font4.setWeight(75);
+        lineEdit_team_name_2->setFont(font4);
+        label_name_12 = new QLabel(groupBox);
+        label_name_12->setObjectName(QString::fromUtf8("label_name_12"));
+        label_name_12->setGeometry(QRect(170, 120, 161, 41));
+        label_name_12->setFont(font3);
+        label_name_12->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_5 = new QLabel(groupBox);
+        label_5->setObjectName(QString::fromUtf8("label_5"));
+        label_5->setGeometry(QRect(230, 170, 821, 581));
+        label_5->setFrameShape(QFrame::Box);
+        label_5->setScaledContents(true);
+        label_5->setAlignment(Qt::AlignCenter);
+        pushButton = new QPushButton(groupBox);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+        pushButton->setGeometry(QRect(580, 770, 93, 28));
+        QFont font5;
+        font5.setFamily(QString::fromUtf8("\345\276\256\350\275\257\351\233\205\351\273\221"));
+        pushButton->setFont(font5);
+        lineEdit_team_name_3 = new QLineEdit(groupBox);
+        lineEdit_team_name_3->setObjectName(QString::fromUtf8("lineEdit_team_name_3"));
+        lineEdit_team_name_3->setGeometry(QRect(330, 840, 531, 41));
+        lineEdit_team_name_3->setFont(font4);
+        label_name_13 = new QLabel(groupBox);
+        label_name_13->setObjectName(QString::fromUtf8("label_name_13"));
+        label_name_13->setGeometry(QRect(170, 840, 161, 41));
+        label_name_13->setFont(font3);
+        label_name_13->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_name_14 = new QLabel(groupBox);
+        label_name_14->setObjectName(QString::fromUtf8("label_name_14"));
+        label_name_14->setGeometry(QRect(170, 910, 131, 41));
+        label_name_14->setFont(font3);
+        label_name_14->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        plainTextEdit = new QPlainTextEdit(groupBox);
+        plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
+        plainTextEdit->setGeometry(QRect(250, 960, 741, 421));
+        label_name_15 = new QLabel(groupBox);
+        label_name_15->setObjectName(QString::fromUtf8("label_name_15"));
+        label_name_15->setGeometry(QRect(170, 1440, 111, 41));
+        label_name_15->setFont(font3);
+        label_name_15->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        lineEdit_team_name_4 = new QLineEdit(groupBox);
+        lineEdit_team_name_4->setObjectName(QString::fromUtf8("lineEdit_team_name_4"));
+        lineEdit_team_name_4->setGeometry(QRect(290, 1440, 531, 41));
+        lineEdit_team_name_4->setFont(font4);
+        label_name_16 = new QLabel(groupBox);
+        label_name_16->setObjectName(QString::fromUtf8("label_name_16"));
+        label_name_16->setGeometry(QRect(170, 1530, 111, 41));
+        label_name_16->setFont(font3);
+        label_name_16->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        comboBox_province_2 = new QComboBox(groupBox);
+        comboBox_province_2->addItem(QString());
+        comboBox_province_2->addItem(QString());
+        comboBox_province_2->addItem(QString());
+        comboBox_province_2->addItem(QString());
+        comboBox_province_2->addItem(QString());
+        comboBox_province_2->addItem(QString());
+        comboBox_province_2->setObjectName(QString::fromUtf8("comboBox_province_2"));
+        comboBox_province_2->setGeometry(QRect(290, 1530, 171, 35));
+        comboBox_province_2->setFont(font4);
+        label_name_17 = new QLabel(groupBox);
+        label_name_17->setObjectName(QString::fromUtf8("label_name_17"));
+        label_name_17->setGeometry(QRect(170, 1600, 111, 41));
+        label_name_17->setFont(font3);
+        label_name_17->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        lineEdit_team_name_5 = new QLineEdit(groupBox);
+        lineEdit_team_name_5->setObjectName(QString::fromUtf8("lineEdit_team_name_5"));
+        lineEdit_team_name_5->setGeometry(QRect(290, 1600, 531, 41));
+        lineEdit_team_name_5->setFont(font4);
+        label_name_18 = new QLabel(groupBox);
+        label_name_18->setObjectName(QString::fromUtf8("label_name_18"));
+        label_name_18->setGeometry(QRect(170, 1680, 111, 41));
+        label_name_18->setFont(font3);
+        label_name_18->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        lineEdit_team_name_6 = new QLineEdit(groupBox);
+        lineEdit_team_name_6->setObjectName(QString::fromUtf8("lineEdit_team_name_6"));
+        lineEdit_team_name_6->setGeometry(QRect(290, 1680, 531, 41));
+        lineEdit_team_name_6->setFont(font4);
+        label_name_19 = new QLabel(groupBox);
+        label_name_19->setObjectName(QString::fromUtf8("label_name_19"));
+        label_name_19->setGeometry(QRect(170, 1760, 111, 41));
+        label_name_19->setFont(font3);
+        label_name_19->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        lineEdit_team_name_7 = new QLineEdit(groupBox);
+        lineEdit_team_name_7->setObjectName(QString::fromUtf8("lineEdit_team_name_7"));
+        lineEdit_team_name_7->setGeometry(QRect(290, 1760, 531, 41));
+        lineEdit_team_name_7->setFont(font4);
+        label_name_20 = new QLabel(groupBox);
+        label_name_20->setObjectName(QString::fromUtf8("label_name_20"));
+        label_name_20->setGeometry(QRect(170, 1840, 111, 41));
+        label_name_20->setFont(font3);
+        label_name_20->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        lineEdit_team_name_8 = new QLineEdit(groupBox);
+        lineEdit_team_name_8->setObjectName(QString::fromUtf8("lineEdit_team_name_8"));
+        lineEdit_team_name_8->setGeometry(QRect(290, 1840, 531, 41));
+        lineEdit_team_name_8->setFont(font4);
+        label_name_21 = new QLabel(groupBox);
+        label_name_21->setObjectName(QString::fromUtf8("label_name_21"));
+        label_name_21->setGeometry(QRect(170, 1920, 111, 41));
+        label_name_21->setFont(font3);
+        label_name_21->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        comboBox_province_3 = new QComboBox(groupBox);
+        comboBox_province_3->addItem(QString());
+        comboBox_province_3->addItem(QString());
+        comboBox_province_3->addItem(QString());
+        comboBox_province_3->addItem(QString());
+        comboBox_province_3->addItem(QString());
+        comboBox_province_3->addItem(QString());
+        comboBox_province_3->addItem(QString());
+        comboBox_province_3->addItem(QString());
+        comboBox_province_3->setObjectName(QString::fromUtf8("comboBox_province_3"));
+        comboBox_province_3->setGeometry(QRect(290, 1920, 171, 35));
+        comboBox_province_3->setFont(font4);
+        groupBox_2 = new QGroupBox(scrollAreaWidgetContents_2);
+        groupBox_2->setObjectName(QString::fromUtf8("groupBox_2"));
+        groupBox_2->setGeometry(QRect(10, 2010, 1171, 941));
+        lineEdit_team_name_9 = new QLineEdit(groupBox_2);
+        lineEdit_team_name_9->setObjectName(QString::fromUtf8("lineEdit_team_name_9"));
+        lineEdit_team_name_9->setGeometry(QRect(300, 40, 531, 41));
+        lineEdit_team_name_9->setFont(font4);
+        label_name_22 = new QLabel(groupBox_2);
+        label_name_22->setObjectName(QString::fromUtf8("label_name_22"));
+        label_name_22->setGeometry(QRect(180, 40, 111, 41));
+        label_name_22->setFont(font3);
+        label_name_22->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        lineEdit_team_name_10 = new QLineEdit(groupBox_2);
+        lineEdit_team_name_10->setObjectName(QString::fromUtf8("lineEdit_team_name_10"));
+        lineEdit_team_name_10->setGeometry(QRect(300, 110, 181, 41));
+        lineEdit_team_name_10->setFont(font4);
+        label_name_23 = new QLabel(groupBox_2);
+        label_name_23->setObjectName(QString::fromUtf8("label_name_23"));
+        label_name_23->setGeometry(QRect(180, 110, 111, 41));
+        label_name_23->setFont(font3);
+        label_name_23->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_name_24 = new QLabel(groupBox_2);
+        label_name_24->setObjectName(QString::fromUtf8("label_name_24"));
+        label_name_24->setGeometry(QRect(490, 110, 31, 41));
+        label_name_24->setFont(font3);
+        label_name_24->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        lineEdit_team_name_11 = new QLineEdit(groupBox_2);
+        lineEdit_team_name_11->setObjectName(QString::fromUtf8("lineEdit_team_name_11"));
+        lineEdit_team_name_11->setGeometry(QRect(300, 180, 181, 41));
+        lineEdit_team_name_11->setFont(font4);
+        label_name_25 = new QLabel(groupBox_2);
+        label_name_25->setObjectName(QString::fromUtf8("label_name_25"));
+        label_name_25->setGeometry(QRect(180, 180, 111, 41));
+        label_name_25->setFont(font3);
+        label_name_25->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_name_26 = new QLabel(groupBox_2);
+        label_name_26->setObjectName(QString::fromUtf8("label_name_26"));
+        label_name_26->setGeometry(QRect(490, 180, 31, 41));
+        label_name_26->setFont(font3);
+        label_name_26->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_name_27 = new QLabel(groupBox_2);
+        label_name_27->setObjectName(QString::fromUtf8("label_name_27"));
+        label_name_27->setGeometry(QRect(180, 250, 111, 41));
+        label_name_27->setFont(font3);
+        label_name_27->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_name_28 = new QLabel(groupBox_2);
+        label_name_28->setObjectName(QString::fromUtf8("label_name_28"));
+        label_name_28->setGeometry(QRect(490, 250, 31, 41));
+        label_name_28->setFont(font3);
+        label_name_28->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        lineEdit_team_name_12 = new QLineEdit(groupBox_2);
+        lineEdit_team_name_12->setObjectName(QString::fromUtf8("lineEdit_team_name_12"));
+        lineEdit_team_name_12->setGeometry(QRect(300, 250, 181, 41));
+        lineEdit_team_name_12->setFont(font4);
+        lineEdit_team_name_13 = new QLineEdit(groupBox_2);
+        lineEdit_team_name_13->setObjectName(QString::fromUtf8("lineEdit_team_name_13"));
+        lineEdit_team_name_13->setGeometry(QRect(300, 320, 181, 41));
+        lineEdit_team_name_13->setFont(font4);
+        label_name_29 = new QLabel(groupBox_2);
+        label_name_29->setObjectName(QString::fromUtf8("label_name_29"));
+        label_name_29->setGeometry(QRect(490, 320, 31, 41));
+        label_name_29->setFont(font3);
+        label_name_29->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_name_30 = new QLabel(groupBox_2);
+        label_name_30->setObjectName(QString::fromUtf8("label_name_30"));
+        label_name_30->setGeometry(QRect(180, 320, 111, 41));
+        label_name_30->setFont(font3);
+        label_name_30->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        lineEdit_team_name_14 = new QLineEdit(groupBox_2);
+        lineEdit_team_name_14->setObjectName(QString::fromUtf8("lineEdit_team_name_14"));
+        lineEdit_team_name_14->setGeometry(QRect(300, 390, 181, 41));
+        lineEdit_team_name_14->setFont(font4);
+        label_name_31 = new QLabel(groupBox_2);
+        label_name_31->setObjectName(QString::fromUtf8("label_name_31"));
+        label_name_31->setGeometry(QRect(490, 390, 31, 41));
+        label_name_31->setFont(font3);
+        label_name_31->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_name_32 = new QLabel(groupBox_2);
+        label_name_32->setObjectName(QString::fromUtf8("label_name_32"));
+        label_name_32->setGeometry(QRect(180, 390, 111, 41));
+        label_name_32->setFont(font3);
+        label_name_32->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        plainTextEdit_2 = new QPlainTextEdit(groupBox_2);
+        plainTextEdit_2->setObjectName(QString::fromUtf8("plainTextEdit_2"));
+        plainTextEdit_2->setGeometry(QRect(240, 500, 741, 421));
+        label_name_33 = new QLabel(groupBox_2);
+        label_name_33->setObjectName(QString::fromUtf8("label_name_33"));
+        label_name_33->setGeometry(QRect(180, 450, 131, 41));
+        label_name_33->setFont(font3);
+        label_name_33->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        groupBox_3 = new QGroupBox(scrollAreaWidgetContents_2);
+        groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
+        groupBox_3->setGeometry(QRect(10, 2970, 1171, 311));
+        label_name_34 = new QLabel(groupBox_3);
+        label_name_34->setObjectName(QString::fromUtf8("label_name_34"));
+        label_name_34->setGeometry(QRect(120, 50, 71, 41));
+        label_name_34->setFont(font3);
+        label_name_34->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_6 = new QLabel(groupBox_3);
+        label_6->setObjectName(QString::fromUtf8("label_6"));
+        label_6->setGeometry(QRect(210, 80, 441, 181));
+        label_6->setFrameShape(QFrame::Box);
+        label_6->setScaledContents(true);
+        label_6->setAlignment(Qt::AlignCenter);
+        pushButton_2 = new QPushButton(groupBox_3);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(690, 240, 93, 28));
+        pushButton_2->setFont(font5);
+        groupBox_4 = new QGroupBox(scrollAreaWidgetContents_2);
+        groupBox_4->setObjectName(QString::fromUtf8("groupBox_4"));
+        groupBox_4->setGeometry(QRect(10, 3300, 1171, 221));
+        lineEdit_team_name_15 = new QLineEdit(groupBox_4);
+        lineEdit_team_name_15->setObjectName(QString::fromUtf8("lineEdit_team_name_15"));
+        lineEdit_team_name_15->setGeometry(QRect(260, 130, 531, 41));
+        lineEdit_team_name_15->setFont(font4);
+        lineEdit_team_name_16 = new QLineEdit(groupBox_4);
+        lineEdit_team_name_16->setObjectName(QString::fromUtf8("lineEdit_team_name_16"));
+        lineEdit_team_name_16->setGeometry(QRect(260, 50, 531, 41));
+        lineEdit_team_name_16->setFont(font4);
+        label_name_35 = new QLabel(groupBox_4);
+        label_name_35->setObjectName(QString::fromUtf8("label_name_35"));
+        label_name_35->setGeometry(QRect(140, 50, 111, 41));
+        label_name_35->setFont(font3);
+        label_name_35->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        label_name_36 = new QLabel(groupBox_4);
+        label_name_36->setObjectName(QString::fromUtf8("label_name_36"));
+        label_name_36->setGeometry(QRect(140, 130, 111, 41));
+        label_name_36->setFont(font3);
+        label_name_36->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        pushButton_3 = new QPushButton(scrollAreaWidgetContents_2);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        pushButton_3->setGeometry(QRect(510, 3570, 161, 51));
+        pushButton_3->setFont(font5);
+        label_provision_2 = new MLabel(scrollAreaWidgetContents_2);
+        label_provision_2->setObjectName(QString::fromUtf8("label_provision_2"));
+        label_provision_2->setGeometry(QRect(990, 3540, 171, 21));
+        label_provision_2->setFont(font1);
+        label_provision_2->setCursor(QCursor(Qt::PointingHandCursor));
+        label_provision_2->setOpenExternalLinks(true);
+        checkBox_2 = new QCheckBox(scrollAreaWidgetContents_2);
+        checkBox_2->setObjectName(QString::fromUtf8("checkBox_2"));
+        checkBox_2->setGeometry(QRect(970, 3540, 21, 21));
+        checkBox_2->setChecked(true);
+        scrollArea_2->setWidget(scrollAreaWidgetContents_2);
+        pushButton_back_2 = new QPushButton(page_register_2);
+        pushButton_back_2->setObjectName(QString::fromUtf8("pushButton_back_2"));
+        pushButton_back_2->setGeometry(QRect(10, 0, 51, 41));
+        stackedWidget->addWidget(page_register_2);
+
+        gridLayout->addWidget(stackedWidget, 0, 0, 1, 1);
+
+
+        retranslateUi(PASystemClass);
+
+        stackedWidget->setCurrentIndex(0);
+
+
+        QMetaObject::connectSlotsByName(PASystemClass);
+    } // setupUi
+
+    void retranslateUi(QWidget *PASystemClass)
+    {
+        PASystemClass->setWindowTitle(QCoreApplication::translate("PASystemClass", "PASystem", nullptr));
+        lineEdit_login_passwd_2->setText(QString());
+        lineEdit_login_name_2->setText(QString());
+        pushButton_login_2->setText(QCoreApplication::translate("PASystemClass", "\347\231\273\345\275\225", nullptr));
+        label_3->setText(QCoreApplication::translate("PASystemClass", "img", nullptr));
+        label_register_2->setText(QCoreApplication::translate("PASystemClass", "\346\263\250\345\206\214", nullptr));
+        label_4->setText(QCoreApplication::translate("PASystemClass", "img", nullptr));
+        label_forget_passwd_2->setText(QCoreApplication::translate("PASystemClass", "\345\277\230\350\256\260\345\257\206\347\240\201", nullptr));
+        checkBox_remember_passwd_2->setText(QCoreApplication::translate("PASystemClass", "\350\256\260\344\275\217\345\257\206\347\240\201", nullptr));
+        checkBox_auto_login_2->setText(QCoreApplication::translate("PASystemClass", "\350\207\252\345\212\250\347\231\273\345\275\225", nullptr));
+        label->setText(QCoreApplication::translate("PASystemClass", "LOGO", nullptr));
+        groupBox->setTitle(QCoreApplication::translate("PASystemClass", "\345\237\272\346\234\254\344\277\241\346\201\257", nullptr));
+        label_name_11->setText(QCoreApplication::translate("PASystemClass", "\345\217\227\347\220\206\351\207\221\350\236\215\346\234\272\346\236\204\347\274\226\345\217\267\357\274\232", nullptr));
+        lineEdit_team_name_2->setText(QString());
+        label_name_12->setText(QCoreApplication::translate("PASystemClass", "\351\207\221\350\236\215\346\234\272\346\236\204\344\273\243\347\240\201\350\257\201\357\274\232", nullptr));
+        label_5->setText(QCoreApplication::translate("PASystemClass", "\350\257\201\344\273\266", nullptr));
+        pushButton->setText(QCoreApplication::translate("PASystemClass", "\344\270\212\344\274\240", nullptr));
+        lineEdit_team_name_3->setText(QString());
+        label_name_13->setText(QCoreApplication::translate("PASystemClass", "\351\207\221\350\236\215\346\234\272\346\236\204\345\220\215\347\247\260\357\274\232", nullptr));
+        label_name_14->setText(QCoreApplication::translate("PASystemClass", "\345\205\254\345\217\270\344\273\213\347\273\215\357\274\232", nullptr));
+        label_name_15->setText(QCoreApplication::translate("PASystemClass", "\350\257\246\347\273\206\345\234\260\345\235\200\357\274\232", nullptr));
+        lineEdit_team_name_4->setText(QString());
+        label_name_16->setText(QCoreApplication::translate("PASystemClass", "\350\241\214\344\270\232\347\261\273\345\236\213\357\274\232", nullptr));
+        comboBox_province_2->setItemText(0, QCoreApplication::translate("PASystemClass", "\351\223\266\350\241\214", nullptr));
+        comboBox_province_2->setItemText(1, QCoreApplication::translate("PASystemClass", "\350\257\201\345\210\270", nullptr));
+        comboBox_province_2->setItemText(2, QCoreApplication::translate("PASystemClass", "\344\277\235\351\231\251", nullptr));
+        comboBox_province_2->setItemText(3, QCoreApplication::translate("PASystemClass", "\344\277\241\346\211\230", nullptr));
+        comboBox_province_2->setItemText(4, QCoreApplication::translate("PASystemClass", "\345\237\272\351\207\221", nullptr));
+        comboBox_province_2->setItemText(5, QCoreApplication::translate("PASystemClass", "\345\244\226\350\265\204\343\200\201\344\276\250\350\265\204\343\200\201\344\270\255\345\244\226\345\220\210\350\265\204", nullptr));
+
+        comboBox_province_2->setCurrentText(QCoreApplication::translate("PASystemClass", "\351\223\266\350\241\214", nullptr));
+        label_name_17->setText(QCoreApplication::translate("PASystemClass", "\346\263\250\345\206\214\344\272\272\357\274\232", nullptr));
+        lineEdit_team_name_5->setText(QString());
+        label_name_18->setText(QCoreApplication::translate("PASystemClass", "\350\272\253\344\273\275\350\257\201;", nullptr));
+        lineEdit_team_name_6->setText(QString());
+        label_name_19->setText(QCoreApplication::translate("PASystemClass", "\347\224\265\350\257\235\357\274\232", nullptr));
+        lineEdit_team_name_7->setText(QString());
+        label_name_20->setText(QCoreApplication::translate("PASystemClass", "\351\202\256\347\256\261\357\274\232", nullptr));
+        lineEdit_team_name_8->setText(QString());
+        label_name_21->setText(QCoreApplication::translate("PASystemClass", "\347\212\266\346\200\201\357\274\232", nullptr));
+        comboBox_province_3->setItemText(0, QCoreApplication::translate("PASystemClass", "\345\234\250\344\270\232", nullptr));
+        comboBox_province_3->setItemText(1, QCoreApplication::translate("PASystemClass", "\345\255\230\347\273\255", nullptr));
+        comboBox_province_3->setItemText(2, QCoreApplication::translate("PASystemClass", "\345\220\212\351\224\200", nullptr));
+        comboBox_province_3->setItemText(3, QCoreApplication::translate("PASystemClass", "\346\263\250\351\224\200", nullptr));
+        comboBox_province_3->setItemText(4, QCoreApplication::translate("PASystemClass", "\350\277\201\345\205\245", nullptr));
+        comboBox_province_3->setItemText(5, QCoreApplication::translate("PASystemClass", "\350\277\201\345\207\272", nullptr));
+        comboBox_province_3->setItemText(6, QCoreApplication::translate("PASystemClass", "\345\201\234\344\270\232", nullptr));
+        comboBox_province_3->setItemText(7, QCoreApplication::translate("PASystemClass", "\346\270\205\347\256\227", nullptr));
+
+        comboBox_province_3->setCurrentText(QCoreApplication::translate("PASystemClass", "\345\234\250\344\270\232", nullptr));
+        groupBox_2->setTitle(QCoreApplication::translate("PASystemClass", "\345\205\254\345\217\270\346\246\202\345\206\265", nullptr));
+        lineEdit_team_name_9->setText(QString());
+        label_name_22->setText(QCoreApplication::translate("PASystemClass", "\345\205\254\345\217\270\346\200\273\344\272\272\346\225\260\357\274\232", nullptr));
+        lineEdit_team_name_10->setText(QString());
+        label_name_23->setText(QCoreApplication::translate("PASystemClass", "\347\224\267\346\200\247\345\215\240\346\257\224\357\274\232", nullptr));
+        label_name_24->setText(QCoreApplication::translate("PASystemClass", "%", nullptr));
+        lineEdit_team_name_11->setText(QString());
+        label_name_25->setText(QCoreApplication::translate("PASystemClass", "\345\245\263\346\200\247\345\215\240\346\257\224\357\274\232", nullptr));
+        label_name_26->setText(QCoreApplication::translate("PASystemClass", "%", nullptr));
+        label_name_27->setText(QCoreApplication::translate("PASystemClass", "\346\234\254\347\247\221\345\215\240\346\257\224\357\274\232", nullptr));
+        label_name_28->setText(QCoreApplication::translate("PASystemClass", "%", nullptr));
+        lineEdit_team_name_12->setText(QString());
+        lineEdit_team_name_13->setText(QString());
+        label_name_29->setText(QCoreApplication::translate("PASystemClass", "%", nullptr));
+        label_name_30->setText(QCoreApplication::translate("PASystemClass", "\351\235\236\346\234\254\347\247\221\345\215\240\346\257\224\357\274\232", nullptr));
+        lineEdit_team_name_14->setText(QString());
+        label_name_31->setText(QCoreApplication::translate("PASystemClass", "%", nullptr));
+        label_name_32->setText(QCoreApplication::translate("PASystemClass", "\346\234\254\347\247\221\344\273\245\344\270\212\345\215\240\346\257\224\357\274\232", nullptr));
+        label_name_33->setText(QCoreApplication::translate("PASystemClass", "\345\244\207\346\263\250\357\274\232", nullptr));
+        groupBox_3->setTitle(QCoreApplication::translate("PASystemClass", "LOGO", nullptr));
+        label_name_34->setText(QCoreApplication::translate("PASystemClass", "LOGO\357\274\232", nullptr));
+        label_6->setText(QCoreApplication::translate("PASystemClass", "LOGO", nullptr));
+        pushButton_2->setText(QCoreApplication::translate("PASystemClass", "\344\270\212\344\274\240", nullptr));
+        groupBox_4->setTitle(QCoreApplication::translate("PASystemClass", "\347\231\273\345\275\225\344\277\241\346\201\257", nullptr));
+        lineEdit_team_name_15->setText(QString());
+        lineEdit_team_name_16->setText(QString());
+        label_name_35->setText(QCoreApplication::translate("PASystemClass", "\347\231\273\351\231\206\350\264\246\345\217\267\357\274\232", nullptr));
+        label_name_36->setText(QCoreApplication::translate("PASystemClass", "\347\231\273\351\231\206\345\257\206\347\240\201\357\274\232", nullptr));
+        pushButton_3->setText(QCoreApplication::translate("PASystemClass", "\346\263\250\345\206\214", nullptr));
+        label_provision_2->setText(QCoreApplication::translate("PASystemClass", "\345\267\262\345\220\214\346\204\217Bingood\347\233\270\345\205\263\346\235\241\346\254\276", nullptr));
+        checkBox_2->setText(QString());
+        pushButton_back_2->setText(QCoreApplication::translate("PASystemClass", "\345\220\216\351\200\200", nullptr));
+    } // retranslateUi
+
+};
+
+namespace Ui {
+    class PASystemClass: public Ui_PASystemClass {};
+} // namespace Ui
+
+QT_END_NAMESPACE
+
+#endif // UI_PASYSTEM_H
